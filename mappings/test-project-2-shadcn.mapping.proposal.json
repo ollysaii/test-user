@@ -1,0 +1,141 @@
+{
+  "status": "awaiting_approval",
+  "sourceMode": "Orange",
+  "target": "shadcn CSS variables",
+  "mapping": {
+    "background": {
+      "source": "Semantic/Neutral/Background/bg-base",
+      "value": "#FCFCFC"
+    },
+    "foreground": {
+      "source": "Semantic/Neutral/Text/text-primary",
+      "value": "#1E1E1E"
+    },
+    "card": {
+      "source": "Semantic/Neutral/Background/bg-surface",
+      "value": "#FFFFFF"
+    },
+    "card-foreground": {
+      "source": "Semantic/Neutral/Text/text-primary",
+      "value": "#1E1E1E"
+    },
+    "popover": {
+      "source": "Semantic/Neutral/Background/bg-surface",
+      "value": "#FFFFFF"
+    },
+    "popover-foreground": {
+      "source": "Semantic/Neutral/Text/text-primary",
+      "value": "#1E1E1E"
+    },
+    "primary": {
+      "source": "Semantic/Brand/Background/bg-brand",
+      "value": "#FF571E"
+    },
+    "primary-foreground": {
+      "source": "Semantic/Brand/Text/text-on-brand",
+      "value": "#FFFFFF",
+      "contrast": 3.17,
+      "wcagAaNormalText": false
+    },
+    "secondary": {
+      "source": "Semantic/Neutral/Background/bg-surface-subtle",
+      "value": "#F2F2F2"
+    },
+    "secondary-foreground": {
+      "source": "Semantic/Neutral/Text/text-primary",
+      "value": "#1E1E1E"
+    },
+    "muted": {
+      "source": "Semantic/Neutral/Background/bg-surface-subtle",
+      "value": "#F2F2F2"
+    },
+    "muted-foreground": {
+      "source": "Semantic/Neutral/Text/text-secondary",
+      "value": "#5C5C5C",
+      "contrast": 5.97,
+      "wcagAaNormalText": true
+    },
+    "accent": {
+      "source": "Semantic/Brand/Background/bg-brand-weak",
+      "value": "#FFF0EB"
+    },
+    "accent-foreground": {
+      "source": "Semantic/Brand/Text/text-brand-strong",
+      "value": "#C13101",
+      "contrast": 5.1,
+      "wcagAaNormalText": true
+    },
+    "destructive": {
+      "source": "Semantic/Error/Background/bg-error",
+      "value": "#C2392F"
+    },
+    "destructive-foreground": {
+      "source": "Semantic/Error/Text/text-on-error",
+      "value": "#FFFFFF",
+      "contrast": 5.36,
+      "wcagAaNormalText": true
+    },
+    "border": {
+      "source": "Semantic/Neutral/Border/border-default",
+      "value": "#E8E8E8"
+    },
+    "input": {
+      "source": "Semantic/Neutral/Border/border-default",
+      "value": "#E8E8E8"
+    },
+    "ring": {
+      "source": "Semantic/Neutral/Border/border-focus",
+      "value": "#FF571E"
+    },
+    "radius": {
+      "source": "Radius/radius/md",
+      "value": "6px"
+    }
+  },
+  "preservedCustomTokens": {
+    "primary-hover": {
+      "source": "Semantic/Brand/Background/bg-brand-hover",
+      "value": "#C13101"
+    },
+    "success": {
+      "source": "Semantic/Success/Background/bg-success",
+      "value": "#367A02"
+    },
+    "success-foreground": {
+      "source": "Semantic/Success/Text/text-on-success",
+      "value": "#FFFFFF"
+    },
+    "warning": {
+      "source": "Semantic/Warning/Background/bg-warning",
+      "value": "#B55F08"
+    },
+    "warning-foreground": {
+      "source": "Semantic/Warning/Text/text-on-warning",
+      "value": "#FFFFFF"
+    },
+    "error": {
+      "source": "Semantic/Error/Background/bg-error",
+      "value": "#C2392F"
+    }
+  },
+  "decisionRequired": {
+    "primaryContrast": {
+      "currentSourcePair": [
+        "#FF571E",
+        "#FFFFFF"
+      ],
+      "ratio": 3.17,
+      "result": "fails WCAG AA for normal text",
+      "preserveOption": "Keep the exact Figma semantic alias and restrict white labels to large/bold text.",
+      "accessibleOption": "Use text-primary #1E1E1E on brand #FF571E in code; ratio 5.27, but this differs from text-on-brand in Figma."
+    }
+  },
+  "intentionalOmissions": [
+    "Blue primitive mode",
+    "dark mode",
+    "chart tokens",
+    "sidebar tokens",
+    "design elements"
+  ]
+}
+

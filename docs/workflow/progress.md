@@ -1,6 +1,6 @@
 # Test Project 2 progress
 
-Last verified checkpoint: Figma export
+Last verified checkpoint: Orange DTCG generation and shadcn mapping proposal
 
 ## Completed
 
@@ -8,6 +8,9 @@ Last verified checkpoint: Figma export
 - Project configuration points to Figma file `46nPhujYaIS66Y0uJeCPit`, entry node `0:1`.
 - Raw Variables, Styles, and scoped base-component inventory exported through Figma MCP.
 - Export counts and aliases validated.
+- Orange selected as the first prototype theme.
+- Generated one DTCG 2025.10 bundle containing 129 tokens and 69 resolved aliases.
+- Prepared the shadcn mapping proposal and measured key contrast pairs.
 
 ## Current source state
 
@@ -20,11 +23,11 @@ Last verified checkpoint: Figma export
 
 ## Pending approval
 
-Choose the initial brand-theme scope before generating DTCG and CSS:
+Choose how code should handle the existing `text-on-brand` contrast gap:
 
-1. Orange only for the first prototype.
-2. Orange and Blue as switchable brand themes.
+1. Preserve the exact Figma white label on `brand-500` (`3.17:1`; fails WCAG AA for normal text).
+2. Use `text-primary` (`#1E1E1E`) for the shadcn primary foreground (`5.27:1`; passes AA) and record the deliberate code-only accessibility override.
 
 ## Stale template artifacts
 
-The existing files under `tokens/dtcg/`, `mappings/`, and `theme/` still describe the original pilot. They must not be treated as Test Project 2 output and will be replaced only after the mapping proposal is approved.
+The old mapping and theme files still describe the original pilot. They must not be treated as Test Project 2 output and will be replaced only after the new mapping proposal and accessibility decision are approved.

@@ -1,211 +1,86 @@
-import fs from "node:fs";
-import path from "node:path";
+import fs from "node:fs"
+import path from "node:path"
 
-const root = path.resolve("work/workflow-lab");
-const rawDir = path.join(root, "raw/figma-variables");
-const outDir = path.join(root, "derived/dtcg");
+const rawDir = path.resolve("tokens/raw")
+const outDir = path.resolve("tokens/dtcg")
+const sourceNames = ["primitives", "semantic", "spacing", "radius"]
+const sources = Object.fromEntries(
+  sourceNames.map((name) => [name, JSON.parse(fs.readFileSync(path.join(rawDir, `${name}.raw.json`), "utf8"))]),
+)
 
-const read = (name) => JSON.parse(fs.readFileSync(path.join(rawDir, name), "utf8"));
-const sources = {
-  primitives: read("primitives.raw.json"),
-  semantic: read("semantic.raw.json"),
-  radius: read("radius.raw.json"),
-  typography: read("typography.raw.json"),
-  spacing: read("spacing.raw.json"),
-};
-
-const idToTokenPath = new Map();
-for (const [collectionName, source] of Object.entries(sources)) {
+const selectedModes = { primitives: "Orange", semantic: "Orange", spacing: "Value", radius: "Value" }
+const idToPath = new Map()
+for (const [sourceName, source] of Object.entries(sources)) {
   for (const variable of source.variables) {
-    idToTokenPath.set(variable.id, `${collectionName}.${variable.name.split("/").join(".")}`);
+    idToPath.set(variable.id, `${sourceName}.${variable.name.split("/").join(".")}`)
   }
 }
 
+const modeId = (source, modeName) => {
+  const mode = source.collection.modes.find((candidate) => candidate.name === modeName)
+  if (!mode) throw new Error(`Mode ${modeName} missing from ${source.collection.name}`)
+  return mode.modeId
+}
+const byte = (value) => Math.round(Math.max(0, Math.min(1, value)) * 255).toString(16).padStart(2, "0")
+const toHex = ({ r, g, b, a = 1 }) => `#${byte(r)}${byte(g)}${byte(b)}${a < 1 ? byte(a) : ""}`.toUpperCase()
+const tokenType = (variable) => variable.type === "COLOR" ? "color" : "dimension"
+const tokenValue = (variable, value) => {
+  if (value && typeof value === "object" && value.aliasTo) {
+    const target = idToPath.get(value.aliasTo)
+    if (!target) throw new Error(`Broken alias ${variable.name} -> ${value.aliasTo}`)
+    return `{${target}}`
+  }
+  if (variable.type === "COLOR") {
+    return { colorSpace: "srgb", components: [value.r, value.g, value.b], alpha: value.a ?? 1, hex: toHex(value) }
+  }
+  return { value, unit: "px" }
+}
+
+const document = {
+  $description: "Test Project 2 tokens using the approved Orange brand mode.",
+  $extensions: { "com.workflow": { source: "Figma MCP read-only export", fileKey: "46nPhujYaIS66Y0uJeCPit", primitiveMode: "Orange", semanticMode: "Orange", generatedFromRaw: true } },
+}
+
+let tokenCount = 0
+let aliasCount = 0
+for (const [sourceName, source] of Object.entries(sources)) {
+  const selectedModeId = modeId(source, selectedModes[sourceName])
+  for (const variable of source.variables) {
+    const segments = [sourceName, ...variable.name.split("/")]
+    let cursor = document
+    for (const segment of segments.slice(0, -1)) {
+      cursor[segment] ??= {}
+      cursor = cursor[segment]
+    }
+    const rawValue = variable.valuesByMode[selectedModeId]
+    if (rawValue === undefined) throw new Error(`Missing ${selectedModes[sourceName]} value for ${variable.name}`)
+    if (rawValue && typeof rawValue === "object" && rawValue.aliasTo) aliasCount += 1
+    cursor[segments.at(-1)] = {
+      $type: tokenType(variable),
+      $value: tokenValue(variable, rawValue),
+      $extensions: { "com.figma": { id: variable.id, key: variable.key, scopes: variable.scopes, codeSyntax: variable.codeSyntax, hiddenFromPublishing: variable.hiddenFromPublishing } },
+      ...(variable.description ? { $description: variable.description } : {}),
+    }
+    tokenCount += 1
+  }
+}
+
+fs.mkdirSync(outDir, { recursive: true })
+for (const existing of fs.readdirSync(outDir)) {
+  if (existing.endsWith(".tokens.json")) fs.unlinkSync(path.join(outDir, existing))
+}
+const filename = "foundation.orange.tokens.json"
+fs.writeFileSync(path.join(outDir, filename), `${JSON.stringify(document, null, 2)}\n`)
 const audit = {
   specification: "DTCG 2025.10",
-  sourceVariableCount: 0,
-  generatedBundles: [],
-  countsByCollection: {},
-  aliasCount: 0,
+  sourceVariableCount: tokenCount,
+  generatedBundles: [{ filename, tokenCount }],
+  countsByCollection: Object.fromEntries(Object.entries(sources).map(([name, source]) => [name, source.variables.length])),
+  selectedModes,
+  aliasCount,
   brokenAliases: [],
-  invalidNames: [],
-  caseInsensitiveCollisions: [],
-  ambiguousUnits: [],
-  notes: [],
-};
-
-const toHex = ({ r, g, b }) => {
-  const byte = (value) => Math.round(Math.max(0, Math.min(1, value)) * 255)
-    .toString(16)
-    .padStart(2, "0");
-  return `#${byte(r)}${byte(g)}${byte(b)}`;
-};
-
-const fontWeightMap = {
-  Thin: 100,
-  "Extra Light": 200,
-  Light: 300,
-  Regular: 400,
-  Normal: 400,
-  Medium: 500,
-  SemiBold: 600,
-  "Semi Bold": 600,
-  Bold: 700,
-  "Extra Bold": 800,
-  Black: 900,
-};
-
-function tokenType(variable) {
-  if (variable.resolvedType === "COLOR") return "color";
-  if (variable.resolvedType === "BOOLEAN") return "boolean";
-  if (variable.resolvedType === "STRING") {
-    if (variable.name.startsWith("font/family/")) return "fontFamily";
-    if (variable.name.startsWith("font/weight/")) return "fontWeight";
-    return "string";
-  }
-  if (variable.resolvedType === "FLOAT") {
-    if (variable.name.startsWith("font/tracking/")) return "number";
-    return "dimension";
-  }
-  throw new Error(`Unsupported Figma type ${variable.resolvedType} for ${variable.name}`);
+  valid: tokenCount === 129 && aliasCount === 69,
 }
-
-function literalValue(variable, value) {
-  const type = tokenType(variable);
-  if (type === "color") {
-    return {
-      colorSpace: "srgb",
-      components: [value.r, value.g, value.b],
-      alpha: value.a ?? 1,
-      hex: toHex(value),
-    };
-  }
-  if (type === "dimension") return { value, unit: "px" };
-  if (type === "fontFamily") return [value];
-  if (type === "fontWeight") return fontWeightMap[value] ?? value;
-  return value;
-}
-
-function tokenFor(variable, modeId) {
-  const sourceValue = variable.valuesByMode[modeId];
-  if (sourceValue === undefined) throw new Error(`Missing mode ${modeId} for ${variable.name}`);
-
-  let value;
-  if (sourceValue && typeof sourceValue === "object" && sourceValue.type === "VARIABLE_ALIAS") {
-    audit.aliasCount += 1;
-    const target = idToTokenPath.get(sourceValue.id);
-    if (!target) {
-      audit.brokenAliases.push({ token: variable.name, modeId, targetId: sourceValue.id });
-      value = `{unresolved.${sourceValue.id.replace(/[^a-zA-Z0-9_-]/g, "-")}}`;
-    } else {
-      value = `{${target}}`;
-    }
-  } else {
-    value = literalValue(variable, sourceValue);
-  }
-
-  const token = {
-    $type: tokenType(variable),
-    $value: value,
-    $extensions: {
-      "com.figma": {
-        id: variable.id,
-        key: variable.key,
-        collectionId: variable.variableCollectionId,
-        scopes: variable.scopes,
-        codeSyntax: variable.codeSyntax,
-        hiddenFromPublishing: variable.hiddenFromPublishing,
-      },
-    },
-  };
-  if (variable.description) token.$description = variable.description;
-  if (variable.name.startsWith("font/tracking/")) {
-    token.$extensions["com.workflow-lab"] = {
-      unitStatus: "unresolved",
-      note: "Figma FLOAT Variables do not encode whether tracking is percent, px, or em.",
-    };
-  }
-  return token;
-}
-
-function insertToken(rootObject, collectionName, variable, modeId) {
-  const segments = [collectionName, ...variable.name.split("/")];
-  let cursor = rootObject;
-  for (let index = 0; index < segments.length - 1; index += 1) {
-    const segment = segments[index];
-    cursor[segment] ??= {};
-    cursor = cursor[segment];
-  }
-  cursor[segments.at(-1)] = tokenFor(variable, modeId);
-}
-
-function modeId(source, modeName) {
-  const match = source.collection.modes.find((mode) => mode.name === modeName);
-  if (!match) throw new Error(`Mode ${modeName} not found in ${source.collection.name}`);
-  return match.modeId;
-}
-
-const allNames = [];
-for (const [collectionName, source] of Object.entries(sources)) {
-  audit.sourceVariableCount += source.variables.length;
-  audit.countsByCollection[collectionName] = source.variables.length;
-  for (const variable of source.variables) {
-    const fullName = `${collectionName}/${variable.name}`;
-    allNames.push(fullName);
-    for (const segment of fullName.split("/")) {
-      if (segment.startsWith("$") || /[{}.]/.test(segment)) audit.invalidNames.push(fullName);
-    }
-    if (variable.name.startsWith("font/tracking/")) audit.ambiguousUnits.push(fullName);
-  }
-}
-
-const folded = new Map();
-for (const name of allNames) {
-  const key = name.toLocaleLowerCase();
-  const previous = folded.get(key);
-  if (previous && previous !== name) audit.caseInsensitiveCollisions.push([previous, name]);
-  folded.set(key, name);
-}
-
-fs.mkdirSync(outDir, { recursive: true });
-
-for (const breakpoint of ["1440", "744", "375"]) {
-  const document = {
-    $description: `Prototype UI Library tokens for the ${breakpoint}px responsive mode.`,
-    $extensions: {
-      "com.workflow-lab": {
-        source: "Figma MCP read-only export",
-        fileKey: "X6H2qWq3xat1CeUW3unUmK",
-        semanticMode: "Light",
-        responsiveMode: breakpoint,
-        generatedFromRaw: true,
-      },
-    },
-  };
-
-  const selectedModes = {
-    primitives: modeId(sources.primitives, "Value"),
-    semantic: modeId(sources.semantic, "Light"),
-    radius: modeId(sources.radius, breakpoint),
-    typography: modeId(sources.typography, breakpoint),
-    spacing: modeId(sources.spacing, breakpoint),
-  };
-
-  for (const [collectionName, source] of Object.entries(sources)) {
-    for (const variable of source.variables) {
-      insertToken(document, collectionName, variable, selectedModes[collectionName]);
-    }
-  }
-
-  const filename = `foundation.light.${breakpoint}.tokens.json`;
-  fs.writeFileSync(path.join(outDir, filename), `${JSON.stringify(document, null, 2)}\n`);
-  audit.generatedBundles.push({ filename, tokenCount: audit.sourceVariableCount });
-}
-
-audit.notes.push("Each responsive bundle contains Primitives, Semantic Light, Radius, Typography, and Spacing so DTCG aliases resolve within one document.");
-audit.notes.push("Figma collection and token names were preserved; no shadcn renaming has been applied.");
-audit.notes.push("Tracking tokens remain number tokens because their unit cannot be inferred safely from the Figma Variable payload.");
-
-fs.writeFileSync(path.join(root, "derived/dtcg-audit.json"), `${JSON.stringify(audit, null, 2)}\n`);
-
-console.log(JSON.stringify(audit, null, 2));
+fs.writeFileSync(path.join(outDir, "audit.json"), `${JSON.stringify(audit, null, 2)}\n`)
+if (!audit.valid) throw new Error(`Unexpected export counts: ${JSON.stringify(audit)}`)
+console.log(JSON.stringify(audit, null, 2))

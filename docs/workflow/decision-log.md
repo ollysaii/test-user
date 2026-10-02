@@ -88,6 +88,6 @@ Use the committed Vite, React, shadcn, Radix, and Nova setup under `apps/prototy
 
 ## D-015 — Preserve Test Project 2 brand modes pending approval
 
-Status: awaiting project decision
+Status: approved for initial prototype
 
-The source Primitives collection contains `Orange` and `Blue`, while the Semantic collection contains one mode named `Orange` whose values alias Primitives. Preserve both raw primitive modes. Do not generate one theme, two themes, or silently discard either mode until the project designer approves the initial prototype scope.
+The source Primitives collection contains `Orange` and `Blue`, while the Semantic collection contains one mode named `Orange` whose values alias Primitives. Preserve both raw primitive modes, but generate only the `Orange` code theme for the initial prototype. Blue remains intentionally deferred and must not be deleted from the raw export.
