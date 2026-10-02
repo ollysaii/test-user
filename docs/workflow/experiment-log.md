@@ -316,3 +316,21 @@ Date: 2026-10-02
 ### Lesson
 
 Authentication and registration can share interaction components without becoming one ambiguous flow. An explicit `authMode` keeps copy and post-OTP behavior distinct while preserving a single reviewable prototype.
+
+## Experiment 010 — Build the ОСЦПВ application wizard
+
+Date: 2026-10-02
+
+### Result
+
+- Added the complete six-step application flow: start date, vehicle search, vehicle confirmation/manual entry, policyholder, offer, and documents.
+- Added deterministic found, not-found, and registry-unavailable vehicle lookup behavior with a permanent manual fallback.
+- Added prefilled editable policyholder data, inline validation, transparent pricing, edit-return paths, and coverage details.
+- Added camera/file upload paths, unclear-photo recovery, upload feedback, preview, replace, delete confirmation, and submission success.
+- Added saved-draft exit and a Home card that resumes at the stored step.
+- Verified the found-vehicle happy path through submission and the manual-entry save-and-resume path.
+- Lint and production build pass.
+
+### Lesson
+
+Keeping the wizard in a dedicated module makes a large scenario reviewable without destabilizing authentication. Persisting only the last incomplete step is sufficient for this prototype; production persistence remains deliberately out of scope.

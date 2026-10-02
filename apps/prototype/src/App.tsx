@@ -16,8 +16,9 @@ import {
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { cn } from "@/lib/utils"
+import { ApplicationFlow } from "@/ApplicationFlow"
 
-type Screen = "guest" | "loginRequired" | "phone" | "otp" | "consent" | "confirmation" | "destination" | "recovery" | "callback" | "callbackSuccess"
+type Screen = "guest" | "loginRequired" | "phone" | "otp" | "consent" | "confirmation" | "destination" | "recovery" | "callback" | "callbackSuccess" | "application"
 type Intent = "home" | "purchase" | "policy" | "case" | "accident" | "unavailable"
 type AuthMode = "register" | "login"
 type Sheet = "terms" | "privacy" | "support" | "accident" | "policies" | "vehicle" | "policy" | null
@@ -232,6 +233,7 @@ export function App() {
   const [confirmation, setConfirmation] = useState<"new" | "existing">("new")
   const [callbackPhone, setCallbackPhone] = useState("")
   const [callbackTime, setCallbackTime] = useState("10:00–13:00")
+  const [draftStep, setDraftStep] = useState<number | null>(null)
   const otpRef = useRef<HTMLInputElement>(null)
 
   const isExisting = phone === EXISTING_PHONE
@@ -582,8 +584,9 @@ export function App() {
               <div className="mt-7">
                 <h1 className="text-2xl font-semibold">Вітаємо!</h1>
                 <p className="mt-2 text-sm text-muted-foreground">Усе необхідне для вашого авто — в одному місці.</p>
+                {draftStep && <button type="button" onClick={() => setScreen("application")} className="mt-6 w-full rounded-2xl border border-primary/30 bg-accent p-4 text-left"><span className="text-xs font-semibold text-primary">Чернетка збережена</span><b className="mt-1 block">Продовжити оформлення</b><span className="mt-1 block text-sm text-muted-foreground">Крок {draftStep} із 6</span></button>}
                 <div className="mt-8 grid gap-3">
-                  {[{icon:FileText,title:"Оформити ОСЦПВ",copy:"Новий поліс онлайн",action:() => setIntent("purchase")},{icon:ShieldCheck,title:"Мої поліси",copy:"Документи та статус",action:() => setSheet("policies")},{icon:AlertCircle,title:"Допомога при ДТП",copy:"Екстрений сценарій",action:() => setSheet("accident")}].map(({icon:Icon,title,copy,action}) => (
+                  {[{icon:FileText,title:"Оформити ОСЦПВ",copy:"Новий поліс онлайн",action:() => { setDraftStep(null); setScreen("application") }},{icon:ShieldCheck,title:"Мої поліси",copy:"Документи та статус",action:() => setSheet("policies")},{icon:AlertCircle,title:"Допомога при ДТП",copy:"Екстрений сценарій",action:() => setSheet("accident")}].map(({icon:Icon,title,copy,action}) => (
                     <button key={title} type="button" onClick={action} className="flex min-h-20 items-center gap-4 rounded-2xl border bg-card p-4 text-left hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/30">
                       <span className="grid size-11 place-items-center rounded-xl bg-accent text-accent-foreground"><Icon className="size-5" /></span><span className="flex-1"><b className="block">{title}</b><span className="mt-1 block text-sm text-muted-foreground">{copy}</span></span><ChevronRight className="size-5 text-muted-foreground" />
                     </button>
@@ -597,7 +600,7 @@ export function App() {
                 <h1 className="mt-6 text-2xl font-semibold">Продовжимо оформлення</h1>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">Ми зберегли ваш прогрес. Наступний крок — дані автомобіля.</p>
                 <div className="mt-8 rounded-2xl border bg-card p-5"><p className="text-xs text-muted-foreground">Крок 2 з 5</p><p className="mt-2 font-semibold">Інформація про транспортний засіб</p><div className="mt-4 h-2 rounded-full bg-muted"><div className="h-2 w-2/5 rounded-full bg-primary" /></div></div>
-                <Button className="mt-6 h-12 w-full" onClick={() => setSheet("vehicle")}>Продовжити оформлення</Button>
+                <Button className="mt-6 h-12 w-full" onClick={() => setScreen("application")}>Продовжити оформлення</Button>
               </div>
             )}
             {intent === "policy" && (
@@ -642,6 +645,15 @@ export function App() {
             )}
             <button type="button" onClick={() => { setScreen("guest"); setPhone(""); setOtp(""); setRequiredConsent(false); setMarketingConsent(false) }} className="mt-auto min-h-11 text-sm font-semibold text-muted-foreground">Завершити демо</button>
           </div>
+        )}
+
+        {screen === "application" && (
+          <ApplicationFlow
+            initialStep={draftStep ?? 1}
+            onSupport={() => setSheet("support")}
+            onExit={(step, saved) => { setDraftStep(saved ? step : null); setIntent("home"); setScreen("destination") }}
+            onComplete={() => { setDraftStep(null); setIntent("home"); setScreen("destination") }}
+          />
         )}
       </section>
 

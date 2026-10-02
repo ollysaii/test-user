@@ -20,6 +20,7 @@ Last verified checkpoint: registration prototype built and interaction-tested
 - Updated the review surface to an exact 375 × 812 px iOS layout and verified destination back navigation.
 - Extended the prototype with returning-customer login, access recovery, callback requests, and context-aware destinations.
 - Verified a policy deep-link login and a successful recovery callback request.
+- Added and verified the six-step ОСЦПВ application wizard, including lookup fallback, documents, submission, and resumable drafts.
 
 ## Current source state
 

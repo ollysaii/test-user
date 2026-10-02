@@ -103,3 +103,9 @@ Map `primary-foreground` to the existing `Brand/Text/text-on-brand` white value.
 Status: approved
 
 Keep registration and returning-customer login in the same 375 × 812 px prototype. Reuse phone, OTP, support, confirmation, and destination components while keeping registration-only consent separate. Drive protected-entry and recovery scenarios from Demo controls.
+
+## D-018 — Add ОСЦПВ application as a contained wizard
+
+Status: approved
+
+Keep the six-step application in the same product prototype, but isolate its state and UI in a dedicated module. Preserve registration and login behavior, share the project theme and support surfaces, and return saved drafts to a resumable Home card.
