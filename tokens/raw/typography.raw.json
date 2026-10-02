@@ -1,0 +1,984 @@
+{
+  "exportVersion": 1,
+  "source": {
+    "fileKey": "X6H2qWq3xat1CeUW3unUmK",
+    "exportedAt": "2026-09-25",
+    "method": "Figma MCP Plugin API, read-only batched export"
+  },
+  "collection": {
+    "id": "VariableCollectionId:17:2",
+    "key": "304dac04100dfab58d4dd72dce3b1463bc555313",
+    "name": "Typography",
+    "defaultModeId": "17:0",
+    "modes": [
+      {
+        "name": "1440",
+        "modeId": "17:0"
+      },
+      {
+        "name": "744",
+        "modeId": "28329:0"
+      },
+      {
+        "name": "375",
+        "modeId": "17:1"
+      }
+    ],
+    "hiddenFromPublishing": false,
+    "remote": false
+  },
+  "variables": [
+    {
+      "id": "VariableID:17:3",
+      "key": "ee88ad7011f17b3da93d98d0ddc144fe1be6fa77",
+      "name": "Heading/heading-1-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:11"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:10"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-5xl · Mobile → text-3xl · Page title. One per screen.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-1-size"
+      }
+    },
+    {
+      "id": "VariableID:17:4",
+      "key": "cdc302c906c2a324b13e892ee138ef3cf6952dd0",
+      "name": "Heading/heading-1-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28507:42899"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:19"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:26"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-12 · Mobile → leading-9 · Paired with heading-1-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-1-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:5",
+      "key": "8476ea6f733c9811dc950af0a17f67f268bc4945",
+      "name": "Heading/heading-2-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:10"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:19"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:21"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-4xl · Mobile → text-2xl · Major section title.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-2-size"
+      }
+    },
+    {
+      "id": "VariableID:17:6",
+      "key": "887e7de3a719dc77f4b5b076478e4e571e9fac68",
+      "name": "Heading/heading-2-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:19"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:24"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:25"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-10 · Mobile → leading-8 · Paired with heading-2-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-2-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:7",
+      "key": "2cb01813acc0d6ca17fe682a5156f0ef3f8039ee",
+      "name": "Heading/heading-3-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:20"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:18"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:20"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-3xl · Mobile → text-xl · Subsection title.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-3-size"
+      }
+    },
+    {
+      "id": "VariableID:17:8",
+      "key": "9c521425720529b2bf56ccccddaa241062f2d192",
+      "name": "Heading/heading-3-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:17"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:15"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:24"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-9 · Mobile → leading-7 · Paired with heading-3-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-3-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:9",
+      "key": "f37e84f502e1c87d1dedc8a56062bd5bb1b41709",
+      "name": "Heading/heading-4-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:18"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:6"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:18"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-2xl · Mobile → text-lg · Card and block title.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-4-size"
+      }
+    },
+    {
+      "id": "VariableID:17:10",
+      "key": "b5e20b7f1b81ba8a774add2e2f29a5023ba8bc56",
+      "name": "Heading/heading-4-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:15"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:15"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-8 · Mobile → leading-7 · Paired with heading-4-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-4-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:11",
+      "key": "a459a93c71575e1ae60ee3c8f3198d6908e12624",
+      "name": "Heading/heading-5-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:7"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-xl · Mobile → text-base · Smallest heading. Group labels.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-5-size"
+      }
+    },
+    {
+      "id": "VariableID:17:12",
+      "key": "f86ca5f5d3902654c25f910aaaa1f81ef30516b8",
+      "name": "Heading/heading-5-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:15"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:15"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-7 · Mobile → leading-6 · Paired with heading-5-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--heading-5-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:13",
+      "key": "82c44e83f25455ac5ce6bdf4f8fb77838f0c5ec7",
+      "name": "Body/body-lg-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-lg · Mobile → text-base · Lead paragraph, intro copy.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-lg-size"
+      }
+    },
+    {
+      "id": "VariableID:18:2",
+      "key": "fca16242c89161c6f018a311dd4e0f3a591fbb4e",
+      "name": "Button/btn-sm-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-sm · Mobile → text-sm · Small button label. 32px control height.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-sm-size"
+      }
+    },
+    {
+      "id": "VariableID:18:3",
+      "key": "8bf046a4eded01a655c8a2af14a47aa1637026a9",
+      "name": "Button/btn-sm-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-5 · Mobile → leading-5 · Paired with btn-sm-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-sm-leading"
+      }
+    },
+    {
+      "id": "VariableID:18:4",
+      "key": "63043782a18c400deb179a6ecb35127fa148959a",
+      "name": "Button/btn-md-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-base · Mobile → text-base · Default button label. 40px control height.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-md-size"
+      }
+    },
+    {
+      "id": "VariableID:18:5",
+      "key": "388d7dfbfc8994f9e9d8d60bb98374a23f639c44",
+      "name": "Button/btn-md-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-6 · Mobile → leading-6 · Paired with btn-md-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-md-leading"
+      }
+    },
+    {
+      "id": "VariableID:18:6",
+      "key": "b83373a032999ce114b1ed775cb0575e650aa5d2",
+      "name": "Button/btn-lg-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:6"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-base · Mobile → text-lg · Large button label. 48px control height, bigger on mobile for touch.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-lg-size"
+      }
+    },
+    {
+      "id": "VariableID:18:7",
+      "key": "b417f88ca5a0b571a16d82dff2e4a6eb1c502f02",
+      "name": "Button/btn-lg-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-6 · Mobile → leading-7 · Paired with btn-lg-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--btn-lg-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:14",
+      "key": "f5f683b317df3c80d0f38afe87ab442a44205fcb",
+      "name": "Body/body-lg-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-7 · Mobile → leading-6 · Paired with body-lg-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-lg-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:15",
+      "key": "6bf442dd7fd7f8bfd744d479e04071c8e1cbe903",
+      "name": "Body/body-base-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-base · Mobile → text-base · Default body copy. Never shrinks below 16px.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-base-size"
+      }
+    },
+    {
+      "id": "VariableID:17:16",
+      "key": "c045a16b64301bd9ada703040a53e88de31b3f22",
+      "name": "Body/body-base-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-6 · Mobile → leading-6 · Paired with body-base-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-base-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:17",
+      "key": "1fa769a31161f5706df997b8b0a993baea6171c9",
+      "name": "Body/body-sm-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:3"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:3"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:3"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-sm · Mobile → text-sm · Dense body copy, table cells.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-sm-size"
+      }
+    },
+    {
+      "id": "VariableID:17:18",
+      "key": "7850b8fb23402b2d870465742224ee76d7c14276",
+      "name": "Body/body-sm-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:12"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:12"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-5 · Mobile → leading-5 · Paired with body-sm-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--body-sm-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:19",
+      "key": "3eb1ea7a454e66af368057c01d327766e2ced234",
+      "name": "Label/label-lg-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:6"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:6"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:6"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-base · Mobile → text-base · Large control label, primary button.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-lg-size"
+      }
+    },
+    {
+      "id": "VariableID:17:20",
+      "key": "23313f99c4469215b69e690007ed23f7caceb42f",
+      "name": "Label/label-lg-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-6 · Mobile → leading-6 · Paired with label-lg-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-lg-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:21",
+      "key": "a2424ee16c9de7981ed4d20a638b18f129e15e7c",
+      "name": "Label/label-base-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-sm · Mobile → text-sm · Default control label, input label.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-base-size"
+      }
+    },
+    {
+      "id": "VariableID:17:22",
+      "key": "b988f0a23b382a43d79697b663591d4cd131b8aa",
+      "name": "Label/label-base-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-5 · Mobile → leading-5 · Paired with label-base-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-base-leading"
+      }
+    },
+    {
+      "id": "VariableID:17:23",
+      "key": "db3e5b2416f788b1612e7b47382834db720e2568",
+      "name": "Label/label-sm-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → text-xs · Mobile → text-xs · Compact label, badge, chip.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-sm-size"
+      }
+    },
+    {
+      "id": "VariableID:17:24",
+      "key": "d4979e5567bb7bfb76baf2d17116b345c6d2b278",
+      "name": "Label/label-sm-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → leading-4 · Mobile → leading-4 · Paired with label-sm-size.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--label-sm-leading"
+      }
+    },
+    {
+      "id": "VariableID:28333:27",
+      "key": "19eed6e9d52bff06f7188e39327c0f335b47343f",
+      "name": "Field/field-name-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:3"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:28333:28",
+      "key": "6ba703b40fb05c9110db0a3714f52efa7e8e544c",
+      "name": "Field/field-name-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:12"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28333:22"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:28333:29",
+      "key": "59599b83a9953bdd77979f9e12e9eb3013ec1b4e",
+      "name": "Field/field-content-size",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:4"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:5"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "FONT_SIZE"
+      ],
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:28333:30",
+      "key": "c367f62425308682d35bf1e4c1ed3f305d0da613",
+      "name": "Field/field-content-leading",
+      "variableCollectionId": "VariableCollectionId:17:2",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "17:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:13"
+        },
+        "17:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        },
+        "28329:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:14:14"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "LINE_HEIGHT"
+      ],
+      "codeSyntax": {}
+    }
+  ]
+}

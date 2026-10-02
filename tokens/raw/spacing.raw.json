@@ -1,0 +1,1046 @@
+{
+  "exportVersion": 1,
+  "source": {
+    "fileKey": "X6H2qWq3xat1CeUW3unUmK",
+    "exportedAt": "2026-09-25",
+    "method": "Figma MCP Plugin API, read-only batched export"
+  },
+  "collection": {
+    "id": "VariableCollectionId:20:19",
+    "key": "36c435c43dcb6b09b281792701465200532d0306",
+    "name": "Spacing",
+    "defaultModeId": "20:0",
+    "modes": [
+      {
+        "name": "1440",
+        "modeId": "20:0"
+      },
+      {
+        "name": "375",
+        "modeId": "20:1"
+      },
+      {
+        "name": "744",
+        "modeId": "28356:1"
+      }
+    ],
+    "hiddenFromPublishing": false,
+    "remote": false
+  },
+  "variables": [
+    {
+      "id": "VariableID:20:20",
+      "key": "16007844919e9f51123545b9b607c2ceaed1f027",
+      "name": "Inset/space-inset-xs",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-1 · Mobile → space-1 · Tight padding. Badges, tags, dense chips.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-xs"
+      }
+    },
+    {
+      "id": "VariableID:20:21",
+      "key": "0ab80a707779e76cd2eaba53c2f1cdb86e3e4deb",
+      "name": "Inset/space-inset-sm",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-2 · Mobile → space-2 · Small control padding. Small buttons, compact inputs.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-sm"
+      }
+    },
+    {
+      "id": "VariableID:20:22",
+      "key": "313cc2f05c0fb819733112577a8afc1f64e54c19",
+      "name": "Inset/space-inset-md",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-3 · Mobile → space-3 · Default control padding. Buttons, inputs, selects.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-md"
+      }
+    },
+    {
+      "id": "VariableID:20:23",
+      "key": "0b5776f9322f1d65700b3d76ef7707e54a6c5bf1",
+      "name": "Inset/space-inset-lg",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-4 · Mobile → space-4 · Card and panel padding.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-lg"
+      }
+    },
+    {
+      "id": "VariableID:20:24",
+      "key": "35449226dac2dca2ba0259f45ffd80f0acdcabac",
+      "name": "Inset/space-inset-xl",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-6 · Mobile → space-4 · Large surface padding. Modals, hero blocks.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-xl"
+      }
+    },
+    {
+      "id": "VariableID:28491:40612",
+      "key": "5e4932b902d4c147bc8a3321437a9026de4dc3dd",
+      "name": "Inset/space-inset-xxl",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-6 · Mobile → space-4 · Large surface padding. Modals, hero blocks.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inset-xl"
+      }
+    },
+    {
+      "id": "VariableID:20:25",
+      "key": "8c4a7af2d60e3aee9a71b02e9b7ffc2314783306",
+      "name": "Stack/space-stack-xs",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-1 · Mobile → space-1 · Label to input. Tightest vertical gap.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-stack-xs"
+      }
+    },
+    {
+      "id": "VariableID:20:26",
+      "key": "730955fd0df1385a6e011811cafa0bd8cf921750",
+      "name": "Stack/space-stack-sm",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-2 · Mobile → space-2 · Between related fields.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-stack-sm"
+      }
+    },
+    {
+      "id": "VariableID:20:27",
+      "key": "d33d552a9450d34819129eb21503182ec0b1a0f1",
+      "name": "Stack/space-stack-md",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-4 · Mobile → space-3 · Between form groups, list items.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-stack-md"
+      }
+    },
+    {
+      "id": "VariableID:20:28",
+      "key": "3df70523b472e7ff2c63f6891efbb7bb416c1348",
+      "name": "Stack/space-stack-lg",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-6 · Mobile → space-4 · Between blocks inside a section.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-stack-lg"
+      }
+    },
+    {
+      "id": "VariableID:20:29",
+      "key": "13b3a67928f5497106b6c194bf65be58e6370b35",
+      "name": "Inline/space-inline-xs",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:5"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-1 · Mobile → space-1 · Icon to label inside a control.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inline-xs"
+      }
+    },
+    {
+      "id": "VariableID:20:30",
+      "key": "265cceebfd765aa1062d57ad1f072e7b14601b17",
+      "name": "Inline/space-inline-sm",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-2 · Mobile → space-2 · Between adjacent controls, chips.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inline-sm"
+      }
+    },
+    {
+      "id": "VariableID:20:31",
+      "key": "d88a22e5c78733831313d17ad32eb16b76c0441d",
+      "name": "Inline/space-inline-md",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-3 · Mobile → space-3 · Between button groups, toolbar items.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-inline-md"
+      }
+    },
+    {
+      "id": "VariableID:20:32",
+      "key": "d5f53ff62e40e07c55fb32825588409543ca581c",
+      "name": "Layout/space-gutter-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-6 · Mobile → space-4 · Grid gutter between columns and cards.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-gutter"
+      }
+    },
+    {
+      "id": "VariableID:28507:43328",
+      "key": "7554e0841a7a0b7eaf7d8729e45ba145a6640c16",
+      "name": "Layout/space-gutter-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-6 · Mobile → space-4 · Grid gutter between columns and cards.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-gutter"
+      }
+    },
+    {
+      "id": "VariableID:20:33",
+      "key": "53cdaace624081074e0855a10e1905c050fe7d30",
+      "name": "Layout/space-block",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-8 · Mobile → space-6 · Between blocks within a page section.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-block"
+      }
+    },
+    {
+      "id": "VariableID:20:34",
+      "key": "877588ca8521b304f4404cc5c152508dba73f7f7",
+      "name": "Layout/space-section",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:15"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:15"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-12 · Mobile → space-8 · Between major page sections.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-section"
+      }
+    },
+    {
+      "id": "VariableID:20:35",
+      "key": "2f73493b20909340fcf3bc949b58e11ff2e00915",
+      "name": "Layout/space-page-margin-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:17"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:13"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-8 · Mobile → space-4 · Outer page margin. 32px desktop, 16px mobile.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-page-margin"
+      }
+    },
+    {
+      "id": "VariableID:28479:40001",
+      "key": "00fc16bfe8a59329bcb180df39339095f35f6e5a",
+      "name": "Layout/space-page-margin-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:17"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:16"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:16"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-8 · Mobile → space-4 · Outer page margin. 32px desktop, 16px mobile.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-page-margin"
+      }
+    },
+    {
+      "id": "VariableID:24:2",
+      "key": "dff5acc1c4229c5e5baf5355d63f936e03e0c0fe",
+      "name": "Button/space-btn-sm-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:6"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-1.5 · Mobile → space-1.5 · Small button vertical padding. 20px line-height + 2×6 = 32px control.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-sm-y"
+      }
+    },
+    {
+      "id": "VariableID:28494:41537",
+      "key": "3999364a74b3ee778b04d9f6b3237cc72766b1b9",
+      "name": "Button Group/button-group-top",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:3"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-3 · Mobile → space-3 · Small button horizontal padding.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-sm-x"
+      }
+    },
+    {
+      "id": "VariableID:28494:41536",
+      "key": "1d909fdb59d290d341be675302746601fe4e4bd0",
+      "name": "Button Group/button-group-bottom",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:3"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28494:41546"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:28494:41546"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-1.5 · Mobile → space-1.5 · Small button vertical padding. 20px line-height + 2×6 = 32px control.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-sm-y"
+      }
+    },
+    {
+      "id": "VariableID:24:3",
+      "key": "d7fb088cbbf6655e8d1f259179b5ae41900d1e70",
+      "name": "Button/space-btn-sm-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-3 · Mobile → space-3 · Small button horizontal padding.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-sm-x"
+      }
+    },
+    {
+      "id": "VariableID:24:4",
+      "key": "2b1e2bdba947ddda03edcac602758ff1c9b8861d",
+      "name": "Button/space-btn-md-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:8"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-2 · Mobile → space-2 · Default button vertical padding. 24px line-height + 2×8 = 40px control.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-md-y"
+      }
+    },
+    {
+      "id": "VariableID:24:5",
+      "key": "a1ee3923692155382449b2af6813569bdbc2acd7",
+      "name": "Button/space-btn-md-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-4 · Mobile → space-4 · Default button horizontal padding.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-md-x"
+      }
+    },
+    {
+      "id": "VariableID:24:6",
+      "key": "3363092c63fbad9b00073305b9907e96b8fbf2c5",
+      "name": "Button/space-btn-lg-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-3 · Mobile → space-2.5 · Large button vertical padding. Desktop 24+2×12=48, Mobile 28+2×10=48.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-lg-y"
+      }
+    },
+    {
+      "id": "VariableID:24:7",
+      "key": "5a98bbe2634684860ccc1e12c5934f68644642ab",
+      "name": "Button/space-btn-lg-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-5 · Mobile → space-4 · Large button horizontal padding. Tighter on mobile to fit narrow screens.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-lg-x"
+      }
+    },
+    {
+      "id": "VariableID:24:8",
+      "key": "3179b94e9e575801e99009795d473aeb52927d03",
+      "name": "Button/space-btn-gap",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-2 · Mobile → space-2 · Gap between icon and label inside a button.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {
+        "WEB": "--space-btn-gap"
+      }
+    },
+    {
+      "id": "VariableID:30:2",
+      "key": "8c2ad08a0aaa5fc47ea25b9b2b6f3c852a59d596",
+      "name": "Button/size-icon-btn-sm",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-4 · Mobile → space-4 · 16px both modes. Paired with 14/20 label.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--size-icon-btn-sm"
+      }
+    },
+    {
+      "id": "VariableID:30:3",
+      "key": "8ed12ab720b9cfb9082c729935fa447019b47bf7",
+      "name": "Button/size-icon-btn-md",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:11"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-5 · Mobile → space-4 · Desktop 20px, Mobile 16px. Nearest scale values to the original 18/16.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--size-icon-btn-md"
+      }
+    },
+    {
+      "id": "VariableID:30:4",
+      "key": "c5ff52045fc9411f399dcc9df544a2ae0b6e02b0",
+      "name": "Button/size-icon-btn-lg",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:12"
+        }
+      },
+      "remote": false,
+      "description": "Desktop → space-5 · Mobile → space-5 · 20px both modes.",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "WIDTH_HEIGHT"
+      ],
+      "codeSyntax": {
+        "WEB": "--size-icon-btn-lg"
+      }
+    },
+    {
+      "id": "VariableID:28382:3",
+      "key": "2b75f77903d71a2dd30b2ebe8bb25a37f9b09ece",
+      "name": "Input/space-input-x",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:10"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:28382:4",
+      "key": "41583d71f03b2876a6939a1ead06ed3e7c913216",
+      "name": "Input/space-input-y",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "GAP"
+      ],
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:28381:11315",
+      "key": "5cc4bfb114f1921f06556e4c090b76e60ad1f27a",
+      "name": "Input/space-input-gap",
+      "variableCollectionId": "VariableCollectionId:20:19",
+      "resolvedType": "FLOAT",
+      "valuesByMode": {
+        "20:0": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "20:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:7"
+        },
+        "28356:1": {
+          "type": "VARIABLE_ALIAS",
+          "id": "VariableID:20:9"
+        }
+      },
+      "remote": false,
+      "description": "",
+      "hiddenFromPublishing": false,
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "codeSyntax": {}
+    }
+  ]
+}

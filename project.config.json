@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "slug": "prototype-ui-library",
+    "name": "Prototype UI Library Pilot"
+  },
+  "figma": {
+    "fileKey": "X6H2qWq3xat1CeUW3unUmK",
+    "fileUrl": "https://www.figma.com/design/X6H2qWq3xat1CeUW3unUmK/Prototype-UI-Library",
+    "entryNodeId": "3:413",
+    "designMode": "Light"
+  },
+  "prototype": {
+    "framework": "vite-react",
+    "componentBase": "radix",
+    "theme": "theme/prototype-ui-shadcn-theme.css",
+    "scope": ["button", "input", "select", "switch", "checkbox"]
+  },
+  "deferred": [
+    "figma-component-renaming",
+    "dark-mode",
+    "code-connect",
+    "bidirectional-sync",
+    "full-component-parity"
+  ]
+}
+
