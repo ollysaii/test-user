@@ -1,20 +1,21 @@
 {
   "schemaVersion": 1,
   "project": {
-    "slug": "prototype-ui-library",
-    "name": "Prototype UI Library Pilot"
+    "slug": "test-user",
+    "name": "Test Project 2"
   },
   "figma": {
-    "fileKey": "X6H2qWq3xat1CeUW3unUmK",
-    "fileUrl": "https://www.figma.com/design/X6H2qWq3xat1CeUW3unUmK/Prototype-UI-Library",
-    "entryNodeId": "3:413",
-    "designMode": "Light"
+    "fileKey": "46nPhujYaIS66Y0uJeCPit",
+    "fileUrl": "https://www.figma.com/design/46nPhujYaIS66Y0uJeCPit/Design-System--Test2-",
+    "entryNodeId": "0:1",
+    "designMode": "Orange",
+    "availablePrimitiveModes": ["Orange", "Blue"]
   },
   "prototype": {
     "framework": "vite-react",
     "componentBase": "radix",
-    "theme": "theme/prototype-ui-shadcn-theme.css",
-    "scope": ["button", "input", "select", "switch", "checkbox"]
+    "theme": "theme/test-project-2-shadcn-theme.css",
+    "scope": ["button", "badge", "checkbox", "toggle", "input", "dropdown", "tooltip", "switcher", "notes"]
   },
   "deferred": [
     "figma-component-renaming",
@@ -24,4 +25,3 @@
     "full-component-parity"
   ]
 }
-

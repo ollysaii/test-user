@@ -1,5 +1,71 @@
 # Experiment log
 
+## Experiment 009 — Start Test Project 2 from the template
+
+Date: 2026-10-02
+
+### Goal
+
+Replace the template pilot data with a read-only export from the `Design System — Test2` Figma file and prepare a project-specific shadcn mapping.
+
+### Result — export checkpoint
+
+- Created the private repository `ollysaii/test-user` from the workflow template.
+- Updated the project identity and Figma source in `project.config.json`.
+- Exported 4 local Variable collections and 129 Variables in bounded batches.
+- Verified 112 COLOR Variables, 17 FLOAT Variables, 69 aliases, and zero broken alias targets.
+- Exported 1 paint Style, 16 text Styles, and 5 effect Styles.
+- Inventoried 26 base component assets containing 174 variants across the approved Core pages.
+- Preserved the Figma file unchanged.
+
+### Important source behavior
+
+- `Primitives` contains two modes: `Orange` and `Blue`.
+- `Semantic` contains one mode named `Orange`; all 69 Semantic values alias Primitives.
+- The shadcn mapping must therefore explicitly decide whether the first prototype uses the Orange primitive mode only or exposes Orange and Blue as brand themes.
+
+### Errors and lessons
+
+- A combined Styles and Components response exceeded the Figma MCP response limit and was truncated.
+- Recovery: export Styles separately and inventory only the approved Core component pages, excluding Icons, Sidebar, and Design Elements.
+- Lesson: the bounded-batch rule applies to component and Style metadata as well as Variables.
+
+## Experiment 010 — Generate the Orange DTCG bundle
+
+Date: 2026-10-02
+
+### Result
+
+- Selected the existing `Orange` Primitives mode for the first prototype.
+- Generated one DTCG 2025.10 bundle with 129 tokens.
+- Preserved all 69 Semantic aliases and found zero unresolved targets.
+- Prepared a shadcn mapping proposal without applying CSS to the prototype.
+
+### Accessibility checkpoint
+
+- The existing Figma pair `bg-brand` (`#FF571E`) and `text-on-brand` (`#FFFFFF`) measures `3.17:1` and fails WCAG AA for normal text.
+- Using the existing `text-primary` (`#1E1E1E`) on `bg-brand` measures `5.27:1` and passes WCAG AA, but would be a deliberate code-only override from the Figma semantic alias.
+- CSS generation is paused for designer approval of this visible behavior.
+
+## Experiment 011 — Apply and verify the Test Project 2 theme
+
+Date: 2026-10-02
+
+### Result
+
+- Designer approved exact Figma parity for the white label on Orange primary controls.
+- Generated 20 standard shadcn tokens and 11 preserved interaction/status tokens.
+- Replaced the original pilot theme, mappings, and project-specific review artifacts.
+- Connected the committed shadcn app to `theme/test-project-2-shadcn-theme.css`.
+- Replaced the template's Geist import with the Figma text-style family `SF Pro Display`, using the native system-font stack for portability.
+- Lint and production build passed.
+- Visual inspection confirmed the Orange primary controls, light card/popover surfaces, neutral inputs, focus color, and status styling.
+- Interaction testing confirmed both required-field validation and successful form submission.
+
+### Known exception
+
+- `primary / primary-foreground` remains `3.17:1` by explicit designer decision and fails WCAG AA for normal text.
+
 ## Experiment 001 — Establish scope and export Figma Variables
 
 Date: 2026-09-25

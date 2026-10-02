@@ -40,11 +40,11 @@ export function App() {
               Account settings
             </h1>
             <p className="mt-2 max-w-xl text-sm leading-6 text-muted-foreground">
-              A working prototype styled with tokens exported from Prototype UI Library.
+              A working prototype styled with tokens exported from Test Project 2.
             </p>
           </div>
           <span className="hidden rounded-full border bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex">
-            Light theme
+            Orange theme
           </span>
         </div>
 
@@ -156,4 +156,3 @@ export function App() {
 }
 
 export default App
-

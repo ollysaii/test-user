@@ -1,0 +1,25 @@
+{
+  "specification": "DTCG 2025.10",
+  "sourceVariableCount": 129,
+  "generatedBundles": [
+    {
+      "filename": "foundation.orange.tokens.json",
+      "tokenCount": 129
+    }
+  ],
+  "countsByCollection": {
+    "primitives": 43,
+    "semantic": 69,
+    "spacing": 9,
+    "radius": 8
+  },
+  "selectedModes": {
+    "primitives": "Orange",
+    "semantic": "Orange",
+    "spacing": "Value",
+    "radius": "Value"
+  },
+  "aliasCount": 69,
+  "brokenAliases": [],
+  "valid": true
+}

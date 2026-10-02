@@ -1,0 +1,1051 @@
+{
+  "exportedAt": "2026-10-02",
+  "fileKey": "46nPhujYaIS66Y0uJeCPit",
+  "scope": "Core pages excluding Sidebar and design elements",
+  "components": [
+    {
+      "page": "Core / Button",
+      "id": "3301:46170",
+      "key": "12656093338f899ff40824e3a3da7d911de9b197",
+      "name": "Button / Primary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#92:18": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "icon-right#92:19": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Text#29479:0": {
+          "type": "TEXT",
+          "defaultValue": "Button"
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "93:74",
+      "key": "2fbcbe9cf74600821e79a58f462ab0603380186e",
+      "name": "Button / Secondary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#93:18": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "icon-right#93:19": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "93:129",
+      "key": "5614846149ff36750f58637232b34169a75e0b30",
+      "name": "Button / Ghost",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#93:38": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "icon-right#93:39": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "93:184",
+      "key": "1a16b85752282b3d0e8adc2fa276b9c0bc8ec689",
+      "name": "Button / Danger",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#93:58": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "icon-right#93:59": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "280:107",
+      "key": "f92c0192146e7b3bdeb47ab130d002b425bee66b",
+      "name": "Button / Icon / Primary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "281:116",
+      "key": "7f72544fc1d19b3d48e37b949856f12ebaec9396",
+      "name": "Button / Icon / Secondary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "282:125",
+      "key": "62ff557c2e9268a994ce363bf3ed6d1c0c06e77c",
+      "name": "Button / Icon / Ghost",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "283:134",
+      "key": "44513ce0d6f57ce06918ce3cbb360df8f02c2873",
+      "name": "Button / Icon / Danger",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 9,
+      "variantNames": [
+        "Size=sm, State=default",
+        "Size=sm, State=hover",
+        "Size=sm, State=disabled",
+        "Size=md, State=default",
+        "Size=md, State=hover",
+        "Size=md, State=disabled",
+        "Size=lg, State=default",
+        "Size=lg, State=hover",
+        "Size=lg, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "265:92",
+      "key": "ae698a7849bc256c94b46b2e92f420878f66b622",
+      "name": "Button / Split Primary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Type": {
+          "type": "VARIANT",
+          "defaultValue": "Split Primary",
+          "variantOptions": [
+            "Split Primary"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 3,
+      "variantNames": [
+        "Type=Split Primary, State=default",
+        "Type=Split Primary, State=hover",
+        "Type=Split Primary, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "265:91",
+      "key": "4cd7e00f787722a2291f587f97a9fac3e739522c",
+      "name": "Button / Split Secondary",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Type": {
+          "type": "VARIANT",
+          "defaultValue": "Split Secondary",
+          "variantOptions": [
+            "Split Secondary"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 3,
+      "variantNames": [
+        "Type=Split Secondary, State=default",
+        "Type=Split Secondary, State=hover",
+        "Type=Split Secondary, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Button",
+      "id": "162:128",
+      "key": "b6cec9d6df9111bfdfeb7208385b2c33ed7e1fd8",
+      "name": "Button / Text",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#162:18": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon-right#162:19": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "md",
+            "sm"
+          ]
+        },
+        "Style": {
+          "type": "VARIANT",
+          "defaultValue": "brand",
+          "variantOptions": [
+            "brand",
+            "secondary",
+            "danger",
+            "warning"
+          ]
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 24,
+      "variantNames": [
+        "Size=sm, Style=brand, State=default",
+        "Size=md, Style=brand, State=default",
+        "Size=sm, Style=brand, State=hover",
+        "Size=md, Style=brand, State=hover",
+        "Size=sm, Style=brand, State=disabled",
+        "Size=md, Style=brand, State=disabled",
+        "Size=sm, Style=secondary, State=default",
+        "Size=md, Style=secondary, State=default",
+        "Size=sm, Style=secondary, State=hover",
+        "Size=md, Style=secondary, State=hover",
+        "Size=sm, Style=secondary, State=disabled",
+        "Size=md, Style=secondary, State=disabled",
+        "Size=sm, Style=danger, State=default",
+        "Size=md, Style=danger, State=default",
+        "Size=sm, Style=danger, State=hover",
+        "Size=md, Style=danger, State=hover",
+        "Size=sm, Style=danger, State=disabled",
+        "Size=md, Style=danger, State=disabled",
+        "Size=sm, Style=warning, State=default",
+        "Size=md, Style=warning, State=default",
+        "Size=sm, Style=warning, State=hover",
+        "Size=md, Style=warning, State=hover",
+        "Size=sm, Style=warning, State=disabled",
+        "Size=md, Style=warning, State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Notes",
+      "id": "431:359",
+      "key": "9fd4e738d1a94e9a623050d7b4ed0e68fda4a5de",
+      "name": "Note",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Type": {
+          "type": "VARIANT",
+          "defaultValue": "Error",
+          "variantOptions": [
+            "Error",
+            "Warning",
+            "Success",
+            "Brand",
+            "Neutral"
+          ]
+        }
+      },
+      "variantCount": 5,
+      "variantNames": [
+        "Type=Error",
+        "Type=Warning",
+        "Type=Success",
+        "Type=Brand",
+        "Type=Neutral"
+      ]
+    },
+    {
+      "page": "Core / Badge",
+      "id": "95:32",
+      "key": "7339e90996c220338c1c0967c20368bccf9892a4",
+      "name": "Badge",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#95:10": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon-right#95:11": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Style": {
+          "type": "VARIANT",
+          "defaultValue": "neutral",
+          "variantOptions": [
+            "neutral",
+            "brand",
+            "success",
+            "danger",
+            "warning"
+          ]
+        },
+        "Size": {
+          "type": "VARIANT",
+          "defaultValue": "sm",
+          "variantOptions": [
+            "sm",
+            "md"
+          ]
+        }
+      },
+      "variantCount": 10,
+      "variantNames": [
+        "Style=neutral, Size=sm",
+        "Style=brand, Size=sm",
+        "Style=success, Size=sm",
+        "Style=danger, Size=sm",
+        "Style=warning, Size=sm",
+        "Style=neutral, Size=md",
+        "Style=brand, Size=md",
+        "Style=success, Size=md",
+        "Style=danger, Size=md",
+        "Style=warning, Size=md"
+      ]
+    },
+    {
+      "page": "Core / Checkbox",
+      "id": "102:27",
+      "key": "9c1bf0f146060959ee91c1d96e182b32540a0bdf",
+      "name": "Checkbox",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "label#102:5": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "unchecked",
+          "variantOptions": [
+            "unchecked",
+            "checked",
+            "indeterminate",
+            "disabled-unchecked",
+            "disabled-checked"
+          ]
+        }
+      },
+      "variantCount": 5,
+      "variantNames": [
+        "State=unchecked",
+        "State=checked",
+        "State=indeterminate",
+        "State=disabled-unchecked",
+        "State=disabled-checked"
+      ]
+    },
+    {
+      "page": "Core / Toggle",
+      "id": "104:18",
+      "key": "72691c73ffc243c4cfff5addca2d4ea7c04a6867",
+      "name": "Toggle",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "label#104:4": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "off",
+          "variantOptions": [
+            "off",
+            "on",
+            "disabled-off",
+            "disabled-on"
+          ]
+        }
+      },
+      "variantCount": 4,
+      "variantNames": [
+        "State=off",
+        "State=on",
+        "State=disabled-off",
+        "State=disabled-on"
+      ]
+    },
+    {
+      "page": "Core / Input",
+      "id": "108:38",
+      "key": "84a6f003a38ee3f1fa450cd70dbead704ad955e3",
+      "name": "Input",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "label#108:16": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "leading-icon#108:17": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "help-icon#108:18": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "help-text#108:19": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "focus",
+            "error",
+            "disabled",
+            "hover",
+            "Filled"
+          ]
+        }
+      },
+      "variantCount": 6,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=focus",
+        "State=error",
+        "State=disabled",
+        "State=Filled"
+      ]
+    },
+    {
+      "page": "Core / Input",
+      "id": "415:151",
+      "key": "68c77ae4345001cacb828c27a709b9bcad116f3b",
+      "name": "Textarea",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "focus",
+            "error",
+            "disabled",
+            "Filled"
+          ]
+        }
+      },
+      "variantCount": 6,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=focus",
+        "State=error",
+        "State=disabled",
+        "State=Filled"
+      ]
+    },
+    {
+      "page": "Core / Input",
+      "id": "429:34",
+      "key": "ad0cf77699d9ae9449957e20c36cb26ce34f8b52",
+      "name": "Search",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "Default",
+          "variantOptions": [
+            "Default",
+            "Hover",
+            "Focused",
+            "Filled"
+          ]
+        }
+      },
+      "variantCount": 4,
+      "variantNames": [
+        "State=Default",
+        "State=Hover",
+        "State=Focused",
+        "State=Filled"
+      ]
+    },
+    {
+      "page": "Core / Dropdown ",
+      "id": "126:38",
+      "key": "a46eea6987781aad517e44885a344ae2883413fa",
+      "name": "Dropdown / Single",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "label#126:12": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "leading-icon#126:13": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "help-text#126:14": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "open",
+            "disabled",
+            "Selected"
+          ]
+        }
+      },
+      "variantCount": 5,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=open",
+        "State=disabled",
+        "State=Selected"
+      ]
+    },
+    {
+      "page": "Core / Dropdown ",
+      "id": "128:22",
+      "key": "dde15d7429027fa10b11a439ee1f853a49b74079",
+      "name": "Dropdown / Multy",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "label#126:12": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "leading-icon#126:13": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "help-text#126:14": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "open",
+            "disabled",
+            "Selected"
+          ]
+        }
+      },
+      "variantCount": 5,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=open",
+        "State=disabled",
+        "State=Selected"
+      ]
+    },
+    {
+      "page": "Core / Dropdown ",
+      "id": "294:73",
+      "key": "9c2dec9d4bdd33f8effb339e880d88df2cbe6d41",
+      "name": "Dropdown / Item",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "Icon-right#363:0": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "selected"
+          ]
+        }
+      },
+      "variantCount": 3,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=selected"
+      ]
+    },
+    {
+      "page": "Core / Dropdown ",
+      "id": "251:1724",
+      "key": "54d7ca6c8f70e94451eebc8c9d007ef079c038a9",
+      "name": "Dropdowm",
+      "type": "COMPONENT",
+      "description": "",
+      "properties": {
+        "Show Dropdown / Item-2#251:12": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show Dropdown / Item-3#251:13": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show Dropdown / Item-4#251:14": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        },
+        "Show Dropdown / Item-5#363:4": {
+          "type": "BOOLEAN",
+          "defaultValue": true
+        }
+      },
+      "variantCount": 1,
+      "variantNames": [
+        "Dropdowm"
+      ]
+    },
+    {
+      "page": "Core / Tooltip",
+      "id": "130:42",
+      "key": "87e40f86d8b6599f88a169da9bebc0af870f75f0",
+      "name": "Tooltip",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "supporting-text#130:8": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Position": {
+          "type": "VARIANT",
+          "defaultValue": "top",
+          "variantOptions": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
+        },
+        "Supporting text": {
+          "type": "VARIANT",
+          "defaultValue": "false",
+          "variantOptions": [
+            "false",
+            "true"
+          ]
+        }
+      },
+      "variantCount": 8,
+      "variantNames": [
+        "Position=top, Supporting text=false",
+        "Position=bottom, Supporting text=false",
+        "Position=left, Supporting text=false",
+        "Position=right, Supporting text=false",
+        "Position=top, Supporting text=true",
+        "Position=bottom, Supporting text=true",
+        "Position=left, Supporting text=true",
+        "Position=right, Supporting text=true"
+      ]
+    },
+    {
+      "page": "Core / Switcher",
+      "id": "2900:8945",
+      "key": "ad33f9e9fdbf56258a87484fd6848b762a28ec6d",
+      "name": "Tab / Item",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#150:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "count#150:5": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Icon#703:0": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2900:8917"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "active",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 4,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=active",
+        "State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Switcher",
+      "id": "2900:8995",
+      "key": "f6227ce7a3d29ab7ed8c66b504f5947efe4758f8",
+      "name": "Switcher / Item",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#151:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon-right#151:5": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Left icon#703:5": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2900:8917"
+        },
+        "Right icon#703:10": {
+          "type": "INSTANCE_SWAP",
+          "defaultValue": "2900:8917"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "default",
+          "variantOptions": [
+            "default",
+            "hover",
+            "active",
+            "disabled"
+          ]
+        }
+      },
+      "variantCount": 4,
+      "variantNames": [
+        "State=default",
+        "State=hover",
+        "State=active",
+        "State=disabled"
+      ]
+    },
+    {
+      "page": "Core / Switcher",
+      "id": "2900:9027",
+      "key": "e4de3e31f85ff12f840f24f83ef045e13fe4e402",
+      "name": "Switcher / Element",
+      "type": "COMPONENT_SET",
+      "description": "",
+      "properties": {
+        "icon-left#151:0": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "icon-right#151:5": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Show Switcher / Item - 3#572:1": {
+          "type": "BOOLEAN",
+          "defaultValue": false
+        },
+        "Items#775:0": {
+          "type": "SLOT"
+        },
+        "State": {
+          "type": "VARIANT",
+          "defaultValue": "1",
+          "variantOptions": [
+            "1",
+            "2"
+          ]
+        }
+      },
+      "variantCount": 2,
+      "variantNames": [
+        "State=1",
+        "State=2"
+      ]
+    }
+  ]
+}

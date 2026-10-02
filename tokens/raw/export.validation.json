@@ -1,0 +1,35 @@
+{
+  "validatedAt": "2026-10-02",
+  "source": "Figma MCP read-only export",
+  "fileKey": "46nPhujYaIS66Y0uJeCPit",
+  "entryNodeId": "0:1",
+  "collectionCount": 4,
+  "variableCount": 129,
+  "countsByCollection": {
+    "Primitives": 43,
+    "Semantic": 69,
+    "Spacing": 9,
+    "Radius": 8
+  },
+  "countsByType": {
+    "COLOR": 112,
+    "FLOAT": 17
+  },
+  "aliasCount": 69,
+  "brokenAliases": [],
+  "styleCounts": {
+    "paint": 1,
+    "text": 16,
+    "effect": 5,
+    "grid": 0
+  },
+  "baseComponentAssetCount": 26,
+  "baseComponentVariantCount": 174,
+  "excluded": [
+    "Foundations / Icons component catalogue",
+    "Core / Sidebar",
+    "Design element pages",
+    "User flow"
+  ],
+  "valid": true
+}

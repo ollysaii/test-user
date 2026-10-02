@@ -85,3 +85,15 @@ Keep the reusable workflow as a template, then create a separate repository for 
 Status: verified in the pilot
 
 Use the committed Vite, React, shadcn, Radix, and Nova setup under `apps/prototype/`. Future prototype tasks reuse it and replace only project-specific tokens, mappings, theme, and screens. Do not initialize shadcn again inside an existing project repository.
+
+## D-015 — Preserve Test Project 2 brand modes pending approval
+
+Status: approved for initial prototype
+
+The source Primitives collection contains `Orange` and `Blue`, while the Semantic collection contains one mode named `Orange` whose values alias Primitives. Preserve both raw primitive modes, but generate only the `Orange` code theme for the initial prototype. Blue remains intentionally deferred and must not be deleted from the raw export.
+
+## D-016 — Preserve the approved Figma primary foreground
+
+Status: approved with known accessibility exception
+
+Map `primary-foreground` to the existing `Brand/Text/text-on-brand` white value. The resulting white-on-orange pair measures `3.17:1` and does not meet WCAG AA for normal text. Preserve it to maintain Figma parity, record it in theme validation, and do not silently substitute a darker label in code.
