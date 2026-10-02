@@ -17,6 +17,7 @@ Last verified checkpoint: registration prototype built and interaction-tested
 - Built the clickable ОСЦПВ registration flow from the supplied requirements.
 - Verified new-user registration through consent and existing-user sign-in without repeated consent.
 - Added demo controls for user type, return intent, and one-shot network failures.
+- Updated the review surface to an exact 375 × 812 px iOS layout and verified destination back navigation.
 
 ## Current source state
 

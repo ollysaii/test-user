@@ -104,8 +104,10 @@ Use accessible modal bottom sheets for Terms, Privacy, and Support. Support expo
 
 ## Responsive and accessibility behavior
 
-- Optimize the primary layout for 375 px width and a one-handed flow.
-- On larger screens, center a phone-sized application surface without converting it into a desktop form.
+- Use an exact 375 × 812 px iOS application surface for review.
+- At a 375 px browser width, render edge-to-edge without an outer card, desktop padding, shadow, or rounded device frame.
+- On larger screens, center the same 375 × 812 px application surface without widening or converting it into a desktop form.
+- Destination screens include a visible back action: purchase and accident return to Home; Home returns to the guest start screen.
 - Use `inputMode="numeric"`, appropriate autocomplete attributes, logical labels, visible focus, and sequential focus order.
 - Keep CTA reachable through sticky placement or scroll-safe spacing.
 - OTP is one accessible input even though six cells are visible.

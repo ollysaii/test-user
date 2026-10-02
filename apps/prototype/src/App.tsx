@@ -336,8 +336,8 @@ export function App() {
   }
 
   return (
-    <main className="min-h-svh bg-muted px-3 py-3 text-foreground sm:grid sm:place-items-center sm:p-6">
-      <section className="relative mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-md flex-col overflow-hidden rounded-[28px] border bg-background shadow-sm sm:min-h-[760px] sm:max-h-[880px]">
+    <main className="grid min-h-svh place-items-center bg-background text-foreground sm:bg-muted sm:p-6">
+      <section className="relative flex h-svh min-h-0 w-full max-w-[375px] flex-col overflow-hidden bg-background sm:h-[812px] sm:rounded-[28px] sm:border sm:shadow-sm">
         {screen === "guest" && (
           <div className="flex min-h-full flex-1 flex-col p-6 sm:p-8">
             <AppMark />
@@ -461,9 +461,21 @@ export function App() {
 
         {screen === "destination" && (
           <div className="flex flex-1 flex-col p-5 sm:p-7">
-            <div className="flex items-center justify-between"><AppMark /><span className="rounded-full bg-success/10 px-3 py-1.5 text-xs font-semibold text-success">Акаунт активний</span></div>
+            <header className="flex min-h-12 items-center justify-between gap-3">
+              <button
+                type="button"
+                onClick={() => intent === "home" ? setScreen("guest") : setIntent("home")}
+                className="-ml-3 grid size-11 place-items-center rounded-full outline-none hover:bg-muted focus-visible:ring-3 focus-visible:ring-ring/30"
+                aria-label="Назад"
+              >
+                <ArrowLeft className="size-5" />
+              </button>
+              <AppMark />
+              <span className="size-11" aria-hidden="true" />
+            </header>
+            <span className="mt-5 self-start rounded-full bg-success/10 px-3 py-1.5 text-xs font-semibold text-success">Акаунт активний</span>
             {intent === "home" && (
-              <div className="mt-10">
+              <div className="mt-7">
                 <h1 className="text-2xl font-semibold">Вітаємо!</h1>
                 <p className="mt-2 text-sm text-muted-foreground">Усе необхідне для вашого авто — в одному місці.</p>
                 <div className="mt-8 grid gap-3">
@@ -476,7 +488,7 @@ export function App() {
               </div>
             )}
             {intent === "purchase" && (
-              <div className="mt-10">
+              <div className="mt-7">
                 <span className="grid size-14 place-items-center rounded-2xl bg-accent text-accent-foreground"><FileText className="size-7" /></span>
                 <h1 className="mt-6 text-2xl font-semibold">Продовжимо оформлення</h1>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">Ми зберегли ваш прогрес. Наступний крок — дані автомобіля.</p>
@@ -485,7 +497,7 @@ export function App() {
               </div>
             )}
             {intent === "accident" && (
-              <div className="mt-10">
+              <div className="mt-7">
                 <span className="grid size-14 place-items-center rounded-2xl bg-destructive/10 text-destructive"><AlertCircle className="size-7" /></span>
                 <h1 className="mt-6 text-2xl font-semibold">Допомога при ДТП</h1>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">Авторизацію завершено. Оберіть чинний поліс або відкрийте покрокову інструкцію.</p>
