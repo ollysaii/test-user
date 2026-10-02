@@ -1,6 +1,6 @@
 # Test Project 2 progress
 
-Last verified checkpoint: Orange theme applied and prototype verified
+Last verified checkpoint: registration prototype built and interaction-tested
 
 ## Completed
 
@@ -14,6 +14,9 @@ Last verified checkpoint: Orange theme applied and prototype verified
 - Approved exact Figma parity for the white primary label, including its known `3.17:1` contrast exception.
 - Generated and applied the Test Project 2 shadcn CSS theme.
 - Passed lint, production build, visual inspection, required-field error state, and successful-save interaction checks.
+- Built the clickable ОСЦПВ registration flow from the supplied requirements.
+- Verified new-user registration through consent and existing-user sign-in without repeated consent.
+- Added demo controls for user type, return intent, and one-shot network failures.
 
 ## Current source state
 
@@ -26,7 +29,7 @@ Last verified checkpoint: Orange theme applied and prototype verified
 
 ## Pending
 
-- Publish the completed branch as a Pull Request for review.
+- Review and approve the registration prototype Pull Request.
 - Merge only after designer approval.
 
 ## Stale template artifacts

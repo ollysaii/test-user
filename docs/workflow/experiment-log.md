@@ -275,3 +275,26 @@ Prove that the generated Figma theme can style a real, clickable shadcn screen w
 - The restricted workspace blocked the local preview port. Recovery: request permission only for the local development server; no public deployment was required.
 - Vite reported that `__dirname` will not be supported by a future native config loader. Recovery: move the alias configuration to `import.meta.dirname`; the warning is now resolved.
 - The official initializer created its own nested `.git` directory, so the first outer commit treated the app as an embedded repository. Recovery: preserve the nested metadata in `work/recovery/`, remove the gitlink from the index, and commit the actual application files. Future automation must check for and remove nested repository metadata before staging a newly initialized app.
+
+## Experiment 008 — Build the ОСЦПВ registration prototype
+
+Date: 2026-10-02
+
+### Goal
+
+Turn the supplied registration requirements into a clickable, mobile-first prototype using the project’s Figma-derived Orange theme and existing shadcn runtime.
+
+### Result
+
+- Built guest, phone, OTP, consent, confirmation, Home, purchase-return, and accident-help states.
+- Added separate new-user and existing-user branches, including retained intent after authorization.
+- Added interactive invalid, expired, resend, and simulated network-error states.
+- Added terms, privacy, support, policy, vehicle, and accident bottom sheets so every visible action responds.
+- Verified the new-user happy path and the returning-user path in the running prototype.
+- Lint and production build pass.
+
+### Errors and lessons
+
+- The first build exposed unused icon imports left over from visual exploration. Recovery: remove them before visual testing; lint should remain the first automated prototype check.
+- The restricted workspace blocked the preview port. Recovery: request narrowly scoped permission for `pnpm run dev`, then use the next available local port.
+- A complete requirements file can be implemented without asking the designer to approve each intermediate screen. The reusable workflow should be: requirements → build → automated checks → interaction check → review link, with questions only for decisions that materially change the requested design.
