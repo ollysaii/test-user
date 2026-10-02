@@ -18,6 +18,8 @@ Last verified checkpoint: registration prototype built and interaction-tested
 - Verified new-user registration through consent and existing-user sign-in without repeated consent.
 - Added demo controls for user type, return intent, and one-shot network failures.
 - Updated the review surface to an exact 375 × 812 px iOS layout and verified destination back navigation.
+- Extended the prototype with returning-customer login, access recovery, callback requests, and context-aware destinations.
+- Verified a policy deep-link login and a successful recovery callback request.
 
 ## Current source state
 

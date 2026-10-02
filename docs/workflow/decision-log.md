@@ -97,3 +97,9 @@ The source Primitives collection contains `Orange` and `Blue`, while the Semanti
 Status: approved with known accessibility exception
 
 Map `primary-foreground` to the existing `Brand/Text/text-on-brand` white value. The resulting white-on-orange pair measures `3.17:1` and does not meet WCAG AA for normal text. Preserve it to maintain Figma parity, record it in theme validation, and do not silently substitute a darker label in code.
+
+## D-017 — Extend one prototype instead of duplicating authentication flows
+
+Status: approved
+
+Keep registration and returning-customer login in the same 375 × 812 px prototype. Reuse phone, OTP, support, confirmation, and destination components while keeping registration-only consent separate. Drive protected-entry and recovery scenarios from Demo controls.

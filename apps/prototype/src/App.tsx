@@ -17,8 +17,9 @@ import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { cn } from "@/lib/utils"
 
-type Screen = "guest" | "phone" | "otp" | "consent" | "confirmation" | "destination"
-type Intent = "home" | "purchase" | "accident"
+type Screen = "guest" | "loginRequired" | "phone" | "otp" | "consent" | "confirmation" | "destination" | "recovery" | "callback" | "callbackSuccess"
+type Intent = "home" | "purchase" | "policy" | "case" | "accident" | "unavailable"
+type AuthMode = "register" | "login"
 type Sheet = "terms" | "privacy" | "support" | "accident" | "policies" | "vehicle" | "policy" | null
 type RequestStage = "phone" | "otp" | "profile"
 
@@ -167,12 +168,13 @@ function BottomSheet({ type, onClose }: { type: Exclude<Sheet, null>; onClose: (
   )
 }
 
-function DemoPanel({ intent, failure, onIntent, onFailure, onPrefill }: {
+function DemoPanel({ intent, failure, onIntent, onFailure, onPrefill, onLogin }: {
   intent: Intent
   failure: RequestStage | null
   onIntent: (intent: Intent) => void
   onFailure: (stage: RequestStage | null) => void
   onPrefill: (kind: "new" | "existing") => void
+  onLogin: () => void
 }) {
   const [open, setOpen] = useState(false)
   return (
@@ -187,11 +189,15 @@ function DemoPanel({ intent, failure, onIntent, onFailure, onPrefill }: {
             <button type="button" onClick={() => onPrefill("new")} className="min-h-11 rounded-lg bg-muted px-2">Новий клієнт</button>
             <button type="button" onClick={() => onPrefill("existing")} className="min-h-11 rounded-lg bg-muted px-2">Існуючий</button>
           </div>
+          <button type="button" onClick={onLogin} className="mt-2 min-h-11 w-full rounded-lg bg-primary px-3 font-semibold text-primary-foreground">Login / сесія завершилась</button>
           <p className="mt-4 font-semibold">Контекст повернення</p>
           <select value={intent} onChange={(e) => onIntent(e.target.value as Intent)} className="mt-2 h-11 w-full rounded-lg border bg-background px-3">
             <option value="home">Home</option>
             <option value="purchase">Оформлення</option>
+            <option value="policy">Конкретний поліс</option>
+            <option value="case">Статус звернення</option>
             <option value="accident">ДТП</option>
+            <option value="unavailable">Недоступний deep link</option>
           </select>
           <p className="mt-4 font-semibold">Наступна мережева помилка</p>
           <select value={failure ?? "none"} onChange={(e) => onFailure(e.target.value === "none" ? null : e.target.value as RequestStage)} className="mt-2 h-11 w-full rounded-lg border bg-background px-3">
@@ -209,6 +215,8 @@ function DemoPanel({ intent, failure, onIntent, onFailure, onPrefill }: {
 export function App() {
   const [screen, setScreen] = useState<Screen>("guest")
   const [intent, setIntent] = useState<Intent>("home")
+  const [authMode, setAuthMode] = useState<AuthMode>("register")
+  const [recoveryReturn, setRecoveryReturn] = useState<Screen>("loginRequired")
   const [phone, setPhone] = useState("")
   const [phoneError, setPhoneError] = useState("")
   const [otp, setOtp] = useState("")
@@ -222,6 +230,8 @@ export function App() {
   const [banner, setBanner] = useState("")
   const [sheet, setSheet] = useState<Sheet>(null)
   const [confirmation, setConfirmation] = useState<"new" | "existing">("new")
+  const [callbackPhone, setCallbackPhone] = useState("")
+  const [callbackTime, setCallbackTime] = useState("10:00–13:00")
   const otpRef = useRef<HTMLInputElement>(null)
 
   const isExisting = phone === EXISTING_PHONE
@@ -237,8 +247,21 @@ export function App() {
   }, [screen])
 
   function start(targetIntent: Intent) {
+    setAuthMode("register")
     setIntent(targetIntent)
     setScreen("phone")
+    setBanner("")
+  }
+
+  function startLogin() {
+    setAuthMode("login")
+    setScreen("loginRequired")
+    setBanner("")
+  }
+
+  function openRecovery(from: Screen) {
+    setRecoveryReturn(from)
+    setScreen("recovery")
     setBanner("")
   }
 
@@ -293,7 +316,7 @@ export function App() {
       }
       setBanner("")
       setOtpError("")
-      if (isExisting) finish("existing")
+      if (authMode === "login" || isExisting) finish("existing")
       else setScreen("consent")
     }, 600)
   }
@@ -330,9 +353,11 @@ export function App() {
 
   function goBack() {
     setBanner("")
-    if (screen === "phone") setScreen("guest")
+    if (screen === "phone") setScreen(authMode === "login" ? "loginRequired" : "guest")
     if (screen === "otp") setScreen("phone")
     if (screen === "consent") setScreen("otp")
+    if (screen === "recovery") setScreen(recoveryReturn)
+    if (screen === "callback") setScreen("recovery")
   }
 
   return (
@@ -362,13 +387,31 @@ export function App() {
           </div>
         )}
 
+        {screen === "loginRequired" && (
+          <div className="flex flex-1 flex-col p-5 sm:p-7">
+            <TopBar onBack={() => setScreen("guest")} />
+            <div className="my-auto py-8">
+              <span className="grid size-16 place-items-center rounded-2xl bg-accent text-accent-foreground">
+                <ShieldCheck className="size-8" aria-hidden="true" />
+              </span>
+              <h1 className="mt-7 text-2xl font-semibold">Підтвердьте номер телефону</h1>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">Щоб захистити дані за полісами та зверненнями, увійдіть за номером телефону</p>
+            </div>
+            <div className="grid gap-2">
+              <Button className="h-12 w-full" onClick={() => setScreen("phone")}>Увійти за номером</Button>
+              <button type="button" onClick={() => setScreen("guest")} className="min-h-11 font-semibold">Повернутися</button>
+              <button type="button" onClick={() => openRecovery("loginRequired")} className="min-h-11 font-semibold text-primary">Немає доступу до номера?</button>
+            </div>
+          </div>
+        )}
+
         {screen === "phone" && (
           <div className="flex flex-1 flex-col p-5 sm:p-7">
             <TopBar onBack={goBack} step="1 з 2" />
             <StepDots current={1} />
             <div className="mt-8">
               <h1 className="text-2xl font-semibold">Введіть номер телефону</h1>
-              <p className="mt-3 text-sm leading-6 text-muted-foreground">Надішлемо SMS-код для входу або створення акаунта</p>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">{authMode === "login" ? "Надішлемо SMS-код для безпечного входу" : "Надішлемо SMS-код для входу або створення акаунта"}</p>
             </div>
             {banner && <div className="mt-5"><Banner onRetry={submitPhone}>{banner}</Banner></div>}
             <div className="mt-8">
@@ -382,10 +425,13 @@ export function App() {
                 {phoneError || "9 цифр після коду країни"}
               </p>
             </div>
-            <button type="button" onClick={() => setSheet("support")} className="mt-5 min-h-11 self-start font-semibold text-primary underline-offset-4 hover:underline">Потрібна допомога?</button>
+            <div className="mt-5 grid justify-items-start">
+              {authMode === "login" && <button type="button" onClick={() => openRecovery("phone")} className="min-h-11 font-semibold text-primary">Немає доступу до номера?</button>}
+              <button type="button" onClick={() => setSheet("support")} className="min-h-11 font-semibold text-primary underline-offset-4 hover:underline">Потрібна допомога?</button>
+            </div>
             <div className="mt-auto pt-8">
               <p className="mb-5 text-xs leading-5 text-muted-foreground">Продовжуючи, ви погоджуєтеся з <button type="button" onClick={() => setSheet("terms")} className="underline">Умовами використання</button> та <button type="button" onClick={() => setSheet("privacy")} className="underline">Політикою конфіденційності</button>.</p>
-              <Button className="h-12 w-full" disabled={phone.length !== 9 || loading} onClick={submitPhone}>{loading ? <><Spinner /> Надсилаємо код</> : "Продовжити"}</Button>
+              <Button className="h-12 w-full" disabled={phone.length !== 9 || loading} onClick={submitPhone}>{loading ? <><Spinner /> Надсилаємо код</> : authMode === "login" ? "Отримати код" : "Продовжити"}</Button>
             </div>
           </div>
         )}
@@ -416,6 +462,7 @@ export function App() {
             <div className="mt-4 grid gap-1">
               <button type="button" onClick={resend} disabled={seconds > 0 && !expired} className="min-h-11 text-left font-semibold text-primary disabled:text-muted-foreground">Надіслати код повторно</button>
               <button type="button" onClick={() => setScreen("phone")} className="min-h-11 text-left font-semibold">Змінити номер</button>
+              {authMode === "login" && <button type="button" onClick={() => openRecovery("otp")} className="min-h-11 text-left font-semibold text-primary">Немає доступу до номера?</button>}
               <button type="button" onClick={() => setSheet("support")} className="min-h-11 text-left font-semibold text-primary">Потрібна допомога?</button>
             </div>
             <div className="mt-auto rounded-xl border border-dashed p-3 text-xs leading-5 text-muted-foreground">
@@ -445,6 +492,63 @@ export function App() {
             <div className="mt-auto pt-8">
               <p className="mb-5 text-xs leading-5 text-muted-foreground">Сервісні повідомлення про поліс і звернення надсилатимемо незалежно від маркетингової згоди.</p>
               <Button className="h-12 w-full" disabled={!requiredConsent || loading} onClick={createProfile}>{loading ? <><Spinner /> Створюємо профіль</> : "Погоджуюсь і продовжую"}</Button>
+            </div>
+          </div>
+        )}
+
+        {screen === "recovery" && (
+          <div className="flex flex-1 flex-col p-5 sm:p-7">
+            <TopBar onBack={goBack} />
+            <div className="mt-8">
+              <span className="grid size-14 place-items-center rounded-2xl bg-accent text-accent-foreground"><Phone className="size-7" /></span>
+              <h1 className="mt-6 text-2xl font-semibold">Немає доступу до номера?</h1>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">Щоб захистити ваші поліси та дані, зміну номера підтверджує менеджер</p>
+              <p className="mt-5 rounded-xl bg-muted p-4 text-sm leading-6">Підготуйте дані, які допоможуть підтвердити вашу особу та поліс.</p>
+            </div>
+            <div className="mt-auto grid gap-3 pt-8">
+              <Button className="h-12" onClick={() => setSheet("support")}>Зв’язатися з менеджером</Button>
+              <Button variant="secondary" className="h-12" onClick={() => setScreen("callback")}>Залишити заявку на дзвінок</Button>
+              <button type="button" onClick={() => setScreen(recoveryReturn)} className="min-h-11 font-semibold">Повернутися до входу</button>
+              <button type="button" onClick={() => setSheet("accident")} className="min-h-11 font-semibold text-destructive">Допомога при ДТП</button>
+            </div>
+          </div>
+        )}
+
+        {screen === "callback" && (
+          <div className="flex flex-1 flex-col p-5 sm:p-7">
+            <TopBar onBack={goBack} />
+            <div className="mt-8">
+              <h1 className="text-2xl font-semibold">Заявка на дзвінок</h1>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">Вкажіть номер, за яким менеджер зможе з вами зв’язатися</p>
+            </div>
+            <div className="mt-8 grid gap-5">
+              <div>
+                <label htmlFor="callback-phone" className="text-sm font-medium">Номер для зв’язку</label>
+                <div className="mt-2 flex h-12 items-center rounded-xl border bg-card px-4 focus-within:border-ring focus-within:ring-3 focus-within:ring-ring/20">
+                  <span className="mr-2 text-sm font-medium">+380</span>
+                  <input id="callback-phone" inputMode="numeric" value={formatPhone(callbackPhone)} onChange={(event) => setCallbackPhone(event.target.value.replace(/\D/g, "").slice(0, 9))} placeholder="XX XXX XX XX" className="min-w-0 flex-1 bg-transparent text-base outline-none" />
+                </div>
+              </div>
+              <div>
+                <label htmlFor="callback-time" className="text-sm font-medium">Коли зручно поговорити</label>
+                <select id="callback-time" value={callbackTime} onChange={(event) => setCallbackTime(event.target.value)} className="mt-2 h-12 w-full rounded-xl border bg-card px-4 text-sm">
+                  <option>10:00–13:00</option>
+                  <option>13:00–16:00</option>
+                  <option>16:00–19:00</option>
+                </select>
+              </div>
+            </div>
+            <Button className="mt-auto h-12 w-full" disabled={callbackPhone.length !== 9} onClick={() => setScreen("callbackSuccess")}>Надіслати заявку</Button>
+          </div>
+        )}
+
+        {screen === "callbackSuccess" && (
+          <div className="grid flex-1 place-items-center p-8 text-center" role="status">
+            <div>
+              <span className="mx-auto grid size-20 place-items-center rounded-full bg-success/10 text-success"><CheckCircle2 className="size-10" /></span>
+              <h1 className="mt-6 text-2xl font-semibold">Ми зв’яжемося з вами</h1>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">Менеджер зателефонує на +380 {formatPhone(callbackPhone)} у проміжку {callbackTime}.</p>
+              <Button className="mt-8 h-12 w-full" onClick={() => setScreen("loginRequired")}>Повернутися до входу</Button>
             </div>
           </div>
         )}
@@ -496,6 +600,28 @@ export function App() {
                 <Button className="mt-6 h-12 w-full" onClick={() => setSheet("vehicle")}>Продовжити оформлення</Button>
               </div>
             )}
+            {intent === "policy" && (
+              <div className="mt-7">
+                <span className="grid size-14 place-items-center rounded-2xl bg-accent text-accent-foreground"><ShieldCheck className="size-7" /></span>
+                <h1 className="mt-6 text-2xl font-semibold">Поліс ОСЦПВ</h1>
+                <p className="mt-2 text-sm text-muted-foreground">Відкрито саме той поліс, який ви хотіли переглянути.</p>
+                <div className="mt-7 rounded-2xl border bg-card p-5">
+                  <span className="rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success">Чинний</span>
+                  <p className="mt-4 text-lg font-semibold">АА 1234 ВВ</p>
+                  <p className="mt-1 text-sm text-muted-foreground">Діє до 02.10.2027</p>
+                </div>
+                <Button className="mt-5 h-12 w-full" onClick={() => setSheet("policy")}>Переглянути документ</Button>
+              </div>
+            )}
+            {intent === "case" && (
+              <div className="mt-7">
+                <span className="grid size-14 place-items-center rounded-2xl bg-accent text-accent-foreground"><MessageCircle className="size-7" /></span>
+                <h1 className="mt-6 text-2xl font-semibold">Статус звернення</h1>
+                <p className="mt-2 text-sm text-muted-foreground">Звернення №4821 знайдено та відкрито після входу.</p>
+                <div className="mt-7 rounded-2xl border bg-card p-5"><p className="text-xs text-muted-foreground">Поточний статус</p><p className="mt-2 font-semibold">Документи перевіряє менеджер</p><p className="mt-3 text-sm leading-6 text-muted-foreground">Ми повідомимо, щойно статус зміниться.</p></div>
+                <Button variant="secondary" className="mt-5 h-12 w-full" onClick={() => setSheet("support")}>Підтримка</Button>
+              </div>
+            )}
             {intent === "accident" && (
               <div className="mt-7">
                 <span className="grid size-14 place-items-center rounded-2xl bg-destructive/10 text-destructive"><AlertCircle className="size-7" /></span>
@@ -505,12 +631,28 @@ export function App() {
                 <Button variant="secondary" className="mt-3 h-12 w-full" onClick={() => setSheet("policy")}>Обрати чинний поліс</Button>
               </div>
             )}
+            {intent === "unavailable" && (
+              <div className="my-auto text-center">
+                <span className="mx-auto grid size-16 place-items-center rounded-full bg-muted text-muted-foreground"><AlertCircle className="size-8" /></span>
+                <h1 className="mt-6 text-2xl font-semibold">Цей матеріал більше недоступний</h1>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">Можливо, посилання застаріло або матеріал було переміщено.</p>
+                <Button className="mt-8 h-12 w-full" onClick={() => setIntent("home")}>До моїх полісів</Button>
+                <Button variant="secondary" className="mt-3 h-12 w-full" onClick={() => setSheet("support")}>Підтримка</Button>
+              </div>
+            )}
             <button type="button" onClick={() => { setScreen("guest"); setPhone(""); setOtp(""); setRequiredConsent(false); setMarketingConsent(false) }} className="mt-auto min-h-11 text-sm font-semibold text-muted-foreground">Завершити демо</button>
           </div>
         )}
       </section>
 
-      <DemoPanel intent={intent} failure={networkFailure} onIntent={setIntent} onFailure={setNetworkFailure} onPrefill={(kind) => { setPhone(kind === "new" ? NEW_PHONE : EXISTING_PHONE); setScreen("phone") }} />
+      <DemoPanel
+        intent={intent}
+        failure={networkFailure}
+        onIntent={setIntent}
+        onFailure={setNetworkFailure}
+        onPrefill={(kind) => { setAuthMode("register"); setPhone(kind === "new" ? NEW_PHONE : EXISTING_PHONE); setScreen("phone") }}
+        onLogin={startLogin}
+      />
       {sheet && <BottomSheet type={sheet} onClose={() => setSheet(null)} />}
     </main>
   )

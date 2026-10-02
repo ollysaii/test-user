@@ -299,3 +299,20 @@ Turn the supplied registration requirements into a clickable, mobile-first proto
 - The restricted workspace blocked the preview port. Recovery: request narrowly scoped permission for `pnpm run dev`, then use the next available local port.
 - A complete requirements file can be implemented without asking the designer to approve each intermediate screen. The reusable workflow should be: requirements → build → automated checks → interaction check → review link, with questions only for decisions that materially change the requested design.
 - The first review surfaced that a responsive max-width alone still looked like a desktop card and that destination states lacked an obvious way back. Recovery: lock the review surface to 375 × 812 px, render edge-to-edge at mobile width, and add explicit destination back navigation. Lesson: mobile prototype acceptance must include the exact target viewport and a navigation escape check for every state.
+
+## Experiment 009 — Extend the prototype with login and access recovery
+
+Date: 2026-10-02
+
+### Result
+
+- Added protected-entry explanation, returning-customer phone and OTP login, and preserved return contexts.
+- Added policy, case-status, accident, saved-draft, Home, and unavailable-deep-link destinations.
+- Added no-phone-access recovery, manager contact, callback request, and callback confirmation.
+- Kept registration available and skipped registration consent for login users.
+- Verified policy deep-link return and callback recovery in the running prototype.
+- Lint and production build pass.
+
+### Lesson
+
+Authentication and registration can share interaction components without becoming one ambiguous flow. An explicit `authMode` keeps copy and post-OTP behavior distinct while preserving a single reviewable prototype.
