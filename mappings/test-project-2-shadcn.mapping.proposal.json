@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_approval",
+  "status": "approved",
   "sourceMode": "Orange",
   "target": "shadcn CSS variables",
   "mapping": {
@@ -93,9 +93,31 @@
     }
   },
   "preservedCustomTokens": {
-    "primary-hover": {
+    "button-primary-hover": {
       "source": "Semantic/Brand/Background/bg-brand-hover",
       "value": "#C13101"
+    },
+    "button-primary-pressed": {
+      "source": "Semantic/Brand/Background/bg-brand-hover",
+      "value": "#C13101",
+      "note": "No distinct pressed semantic exists; preserve the closest approved brand interaction role."
+    },
+    "button-primary-disabled": {
+      "source": "Semantic/Brand/Background/bg-brand-weak",
+      "value": "#FFF0EB"
+    },
+    "button-secondary-hover": {
+      "source": "Semantic/Neutral/Background/bg-surface-subtle",
+      "value": "#F2F2F2"
+    },
+    "button-secondary-pressed": {
+      "source": "Semantic/Neutral/Background/bg-surface-subtle",
+      "value": "#F2F2F2",
+      "note": "No distinct neutral pressed semantic exists."
+    },
+    "button-ghost-hover": {
+      "source": "Semantic/Brand/Background/bg-brand-weak",
+      "value": "#FFF0EB"
     },
     "success": {
       "source": "Semantic/Success/Background/bg-success",
@@ -118,7 +140,7 @@
       "value": "#C2392F"
     }
   },
-  "decisionRequired": {
+  "approvedException": {
     "primaryContrast": {
       "currentSourcePair": [
         "#FF571E",
@@ -126,8 +148,8 @@
       ],
       "ratio": 3.17,
       "result": "fails WCAG AA for normal text",
-      "preserveOption": "Keep the exact Figma semantic alias and restrict white labels to large/bold text.",
-      "accessibleOption": "Use text-primary #1E1E1E on brand #FF571E in code; ratio 5.27, but this differs from text-on-brand in Figma."
+      "decision": "Preserve the exact Figma text-on-brand semantic alias in code.",
+      "approvedByDesigner": true
     }
   },
   "intentionalOmissions": [
@@ -138,4 +160,3 @@
     "design elements"
   ]
 }
-

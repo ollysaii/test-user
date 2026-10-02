@@ -1,0 +1,85 @@
+/*
+ * Generated from Test Project 2 Figma Variables, Orange mode.
+ * The approved Figma pair primary / primary-foreground measures 3.17:1.
+ * It is preserved by explicit designer decision and does not pass WCAG AA for normal text.
+ * Blue, dark mode, charts, sidebar, and design elements are intentionally deferred.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-button-primary-hover: var(--button-primary-hover);
+  --color-button-primary-pressed: var(--button-primary-pressed);
+  --color-button-primary-disabled: var(--button-primary-disabled);
+  --color-button-secondary-hover: var(--button-secondary-hover);
+  --color-button-secondary-pressed: var(--button-secondary-pressed);
+  --color-button-ghost-hover: var(--button-ghost-hover);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-error: var(--error);
+
+  --font-sans: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --radius: 6px; /* Radius/radius/md */
+  --background: #FCFCFC; /* Semantic/Neutral/Background/bg-base */
+  --foreground: #1E1E1E; /* Semantic/Neutral/Text/text-primary */
+  --card: #FFFFFF; /* Semantic/Neutral/Background/bg-surface */
+  --card-foreground: #1E1E1E; /* Semantic/Neutral/Text/text-primary */
+  --popover: #FFFFFF; /* Semantic/Neutral/Background/bg-surface */
+  --popover-foreground: #1E1E1E; /* Semantic/Neutral/Text/text-primary */
+  --primary: #FF571E; /* Semantic/Brand/Background/bg-brand */
+  --primary-foreground: #FFFFFF; /* Semantic/Brand/Text/text-on-brand */
+  --secondary: #F2F2F2; /* Semantic/Neutral/Background/bg-surface-subtle */
+  --secondary-foreground: #1E1E1E; /* Semantic/Neutral/Text/text-primary */
+  --muted: #F2F2F2; /* Semantic/Neutral/Background/bg-surface-subtle */
+  --muted-foreground: #5C5C5C; /* Semantic/Neutral/Text/text-secondary */
+  --accent: #FFF0EB; /* Semantic/Brand/Background/bg-brand-weak */
+  --accent-foreground: #C13101; /* Semantic/Brand/Text/text-brand-strong */
+  --destructive: #C2392F; /* Semantic/Error/Background/bg-error */
+  --destructive-foreground: #FFFFFF; /* Semantic/Error/Text/text-on-error */
+  --border: #E8E8E8; /* Semantic/Neutral/Border/border-default */
+  --input: #E8E8E8; /* Semantic/Neutral/Border/border-default */
+  --ring: #FF571E; /* Semantic/Neutral/Border/border-focus */
+
+  /* Preserved interaction and status roles from the Figma system. */
+  --button-primary-hover: #C13101; /* Semantic/Brand/Background/bg-brand-hover */
+  --button-primary-pressed: #C13101; /* Semantic/Brand/Background/bg-brand-hover */
+  --button-primary-disabled: #FFF0EB; /* Semantic/Brand/Background/bg-brand-weak */
+  --button-secondary-hover: #F2F2F2; /* Semantic/Neutral/Background/bg-surface-subtle */
+  --button-secondary-pressed: #F2F2F2; /* Semantic/Neutral/Background/bg-surface-subtle */
+  --button-ghost-hover: #FFF0EB; /* Semantic/Brand/Background/bg-brand-weak */
+  --success: #367A02; /* Semantic/Success/Background/bg-success */
+  --success-foreground: #FFFFFF; /* Semantic/Success/Text/text-on-success */
+  --warning: #B55F08; /* Semantic/Warning/Background/bg-warning */
+  --warning-foreground: #FFFFFF; /* Semantic/Warning/Text/text-on-warning */
+  --error: #C2392F; /* Semantic/Error/Background/bg-error */
+}

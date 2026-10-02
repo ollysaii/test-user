@@ -1,0 +1,22 @@
+{
+  "valid": true,
+  "generatedAt": "2026-10-02",
+  "sourceMode": "Orange",
+  "rootTokenCount": 20,
+  "preservedCustomTokenCount": 11,
+  "unresolvedReferences": [],
+  "approvedAccessibilityExceptions": [
+    {
+      "pair": "primary / primary-foreground",
+      "ratio": 3.17,
+      "wcagAaNormalText": false
+    }
+  ],
+  "deferred": [
+    "Blue primitive mode",
+    "dark mode",
+    "chart tokens",
+    "sidebar tokens",
+    "design elements"
+  ]
+}

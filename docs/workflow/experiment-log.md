@@ -47,6 +47,25 @@ Date: 2026-10-02
 - Using the existing `text-primary` (`#1E1E1E`) on `bg-brand` measures `5.27:1` and passes WCAG AA, but would be a deliberate code-only override from the Figma semantic alias.
 - CSS generation is paused for designer approval of this visible behavior.
 
+## Experiment 011 — Apply and verify the Test Project 2 theme
+
+Date: 2026-10-02
+
+### Result
+
+- Designer approved exact Figma parity for the white label on Orange primary controls.
+- Generated 20 standard shadcn tokens and 11 preserved interaction/status tokens.
+- Replaced the original pilot theme, mappings, and project-specific review artifacts.
+- Connected the committed shadcn app to `theme/test-project-2-shadcn-theme.css`.
+- Replaced the template's Geist import with the Figma text-style family `SF Pro Display`, using the native system-font stack for portability.
+- Lint and production build passed.
+- Visual inspection confirmed the Orange primary controls, light card/popover surfaces, neutral inputs, focus color, and status styling.
+- Interaction testing confirmed both required-field validation and successful form submission.
+
+### Known exception
+
+- `primary / primary-foreground` remains `3.17:1` by explicit designer decision and fails WCAG AA for normal text.
+
 ## Experiment 001 — Establish scope and export Figma Variables
 
 Date: 2026-09-25

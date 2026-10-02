@@ -1,0 +1,15 @@
+{
+  "valid": true,
+  "reports": [
+    {
+      "filename": "foundation.orange.tokens.json",
+      "tokenCount": 129,
+      "aliasCount": 69,
+      "unresolvedAliases": [],
+      "missingTypes": [],
+      "invalidDimensions": [],
+      "invalidColors": [],
+      "valid": true
+    }
+  ]
+}
