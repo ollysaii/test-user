@@ -1,631 +1,162 @@
 {
-  "exportVersion": 1,
-  "source": {
-    "fileKey": "X6H2qWq3xat1CeUW3unUmK",
-    "exportedAt": "2026-09-25",
-    "method": "Figma MCP Plugin API, read-only batched export"
-  },
+  "exportedAt": "2026-10-02",
+  "fileKey": "46nPhujYaIS66Y0uJeCPit",
   "collection": {
-    "id": "VariableCollectionId:13:2",
-    "key": "f061ce4d607a0747cad5e7f05085b227d42f33d3",
+    "id": "VariableCollectionId:19:2",
+    "key": "e2038e9e404d88e5e7f84d6671c1f07c0ec3f6aa",
     "name": "Radius",
-    "defaultModeId": "13:0",
     "modes": [
       {
-        "name": "1440",
-        "modeId": "13:0"
-      },
-      {
-        "name": "375",
-        "modeId": "13:1"
-      },
-      {
-        "name": "744",
-        "modeId": "28356:0"
+        "name": "Value",
+        "modeId": "19:0"
       }
     ],
-    "hiddenFromPublishing": false,
-    "remote": false
+    "variableIds": [
+      "VariableID:19:3",
+      "VariableID:19:4",
+      "VariableID:19:5",
+      "VariableID:19:6",
+      "VariableID:19:7",
+      "VariableID:19:8",
+      "VariableID:19:9",
+      "VariableID:19:10"
+    ]
   },
   "variables": [
     {
-      "id": "VariableID:13:3",
-      "key": "5997b31a274dbf6739f8757d8591f6bd23a5e8d2",
-      "name": "Button/radius-btn-sm",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/md · Mobile → radius/md · Small button (32px height).",
+      "id": "VariableID:19:3",
+      "key": "98f6dcf8b343dbb7a08ced750240f09e4e80c300",
+      "name": "radius/none",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-btn-sm"
+        "WEB": "var(--radius-none)"
+      },
+      "valuesByMode": {
+        "19:0": 0
       }
     },
     {
-      "id": "VariableID:13:4",
-      "key": "f71e6b8d015c73f62325a47346b22b339406082c",
-      "name": "Button/radius-btn-md",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/lg · Default button (40px height).",
+      "id": "VariableID:19:4",
+      "key": "7ffc038887099b5869e44f67b08ce0138a197986",
+      "name": "radius/xs",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-btn-md"
+        "WEB": "var(--radius-xs)"
+      },
+      "valuesByMode": {
+        "19:0": 2
       }
     },
     {
-      "id": "VariableID:13:5",
-      "key": "a46382edfbba458d6f47c55ed5d778ea24c6aa64",
-      "name": "Button/radius-btn-lg",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/xl · Large button (48px height). Rounder on mobile for touch.",
+      "id": "VariableID:19:5",
+      "key": "f23f9e8de4be71916b2f2c5dec96fc93c28048e9",
+      "name": "radius/sm",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-btn-lg"
+        "WEB": "var(--radius-sm)"
+      },
+      "valuesByMode": {
+        "19:0": 4
       }
     },
     {
-      "id": "VariableID:13:6",
-      "key": "bf1688b539b3876faa67ba73d48feff960a37b53",
-      "name": "Input/radius-input-sm",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/md · Mobile → radius/md · Small input, compact select.",
+      "id": "VariableID:19:6",
+      "key": "46f46bf492b9c11fe2622e3b5b06c45f3fb3ca9b",
+      "name": "radius/md",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-input-sm"
+        "WEB": "var(--radius-md)"
+      },
+      "valuesByMode": {
+        "19:0": 6
       }
     },
     {
-      "id": "VariableID:13:7",
-      "key": "f2a533e73fb322141f9d4cba636e2eb06708f589",
-      "name": "Input/radius-input-md",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/lg · Default input, select, textarea.",
+      "id": "VariableID:19:7",
+      "key": "a3cb2662e3d48433b599824a723d969faef06db6",
+      "name": "radius/lg",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-input-md"
+        "WEB": "var(--radius-lg)"
+      },
+      "valuesByMode": {
+        "19:0": 8
       }
     },
     {
-      "id": "VariableID:13:8",
-      "key": "96d619dec38e5adde81eda3be1d0ccb82b88ee46",
-      "name": "Input/radius-input-lg",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/xl · Large input. Rounder on mobile.",
+      "id": "VariableID:19:8",
+      "key": "031e199442680bed383644f82932b3ed67665fc0",
+      "name": "radius/xl",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-input-lg"
+        "WEB": "var(--radius-xl)"
+      },
+      "valuesByMode": {
+        "19:0": 12
       }
     },
     {
-      "id": "VariableID:13:9",
-      "key": "6026befddb1c609f999d66608d55d14b602802c4",
-      "name": "Label/radius-badge",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/sm · Mobile → radius/sm · Numeric badge, status dot label.",
+      "id": "VariableID:19:9",
+      "key": "7a9b798ac0d90db355aa286d90ae569daaeeca68",
+      "name": "radius/2xl",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-badge"
+        "WEB": "var(--radius-2xl)"
+      },
+      "valuesByMode": {
+        "19:0": 16
       }
     },
     {
-      "id": "VariableID:13:10",
-      "key": "011656970559cd598f3d18b19a0557f507c0027a",
-      "name": "Label/radius-tag",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:4"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/sm · Mobile → radius/sm · Tag, category label.",
+      "id": "VariableID:19:10",
+      "key": "e57b73ec9023c12ae0addb09cc48f3230b5ffeee",
+      "name": "radius/full",
+      "type": "FLOAT",
+      "description": "",
       "hiddenFromPublishing": false,
       "scopes": [
         "CORNER_RADIUS"
       ],
       "codeSyntax": {
-        "WEB": "--radius-tag"
-      }
-    },
-    {
-      "id": "VariableID:13:11",
-      "key": "59ccf63df907c7ff89e26535c2ff0df5a5fd77ff",
-      "name": "Label/radius-chip",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        }
+        "WEB": "var(--radius-full)"
       },
-      "remote": false,
-      "description": "Desktop → radius/full · Mobile → radius/full · Filter chip, removable pill.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-chip"
-      }
-    },
-    {
-      "id": "VariableID:13:12",
-      "key": "056d46c6967d568e0f239be7c1b33ae21bbc78bd",
-      "name": "Card/radius-card",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
       "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/xl · Mobile → radius/2xl · Product card, list card. Rounder on mobile.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-card"
-      }
-    },
-    {
-      "id": "VariableID:13:13",
-      "key": "167c2fec2c1b031cf1851bcf6bcbd4b49f7e0eda",
-      "name": "Card/radius-card-sm",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/xl · Compact card, list row, nested card.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-card-sm"
-      }
-    },
-    {
-      "id": "VariableID:13:14",
-      "key": "70781416705309b137c1b68b5ea7cd12b7929615",
-      "name": "Surface/radius-modal",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:9"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/2xl · Mobile → radius/3xl · Modal dialog. Mobile sheets need a larger top radius.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-modal"
-      }
-    },
-    {
-      "id": "VariableID:13:15",
-      "key": "9639bf61d54216605175aeb0818d68b1c40687f6",
-      "name": "Surface/radius-sheet",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:9"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/2xl · Mobile → radius/3xl · Bottom sheet, side drawer.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-sheet"
-      }
-    },
-    {
-      "id": "VariableID:13:16",
-      "key": "dc49f45428bdcd35bee126b26fc145f809417f3d",
-      "name": "Surface/radius-popover",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/xl · Mobile → radius/2xl · Popover, dropdown panel, menu.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-popover"
-      }
-    },
-    {
-      "id": "VariableID:13:17",
-      "key": "6b24699c4ae2e92bbd54d4b9e381b59530f29a53",
-      "name": "Surface/radius-tooltip",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:5"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/md · Mobile → radius/lg · Tooltip bubble.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-tooltip"
-      }
-    },
-    {
-      "id": "VariableID:13:18",
-      "key": "ec3a593c744671e8f69d81c7225b54e1495b0fa5",
-      "name": "Media/radius-avatar",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/full · Mobile → radius/full · User avatar.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-avatar"
-      }
-    },
-    {
-      "id": "VariableID:13:19",
-      "key": "8530e6270839670daabe294a264c9362cef9cc24",
-      "name": "Media/radius-thumbnail",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:6"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/lg · Mobile → radius/lg · Small product thumbnail.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-thumbnail"
-      }
-    },
-    {
-      "id": "VariableID:13:20",
-      "key": "77834359dd80223a2f6d4b98c0b4f68902690649",
-      "name": "Media/radius-image",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:8"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:7"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/xl · Mobile → radius/2xl · Hero and content imagery.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-image"
-      }
-    },
-    {
-      "id": "VariableID:13:21",
-      "key": "b6aa4e39270badda0e8938654f36434f9fd1bfa7",
-      "name": "Base/radius-none",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:2"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:2"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:2"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/none · Mobile → radius/none · Square corners. Full-bleed sections, tables.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-none"
-      }
-    },
-    {
-      "id": "VariableID:13:22",
-      "key": "de7cf5eb80d3222464fe992f2fd4f08a9dd4a64d",
-      "name": "Base/radius-full",
-      "variableCollectionId": "VariableCollectionId:13:2",
-      "resolvedType": "FLOAT",
-      "valuesByMode": {
-        "13:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "13:1": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        },
-        "28356:0": {
-          "type": "VARIABLE_ALIAS",
-          "id": "VariableID:12:11"
-        }
-      },
-      "remote": false,
-      "description": "Desktop → radius/full · Mobile → radius/full · Fully rounded. Toggles, circular controls.",
-      "hiddenFromPublishing": false,
-      "scopes": [
-        "CORNER_RADIUS"
-      ],
-      "codeSyntax": {
-        "WEB": "--radius-full"
+        "19:0": 9999
       }
     }
   ]

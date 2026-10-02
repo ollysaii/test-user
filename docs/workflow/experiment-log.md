@@ -1,5 +1,35 @@
 # Experiment log
 
+## Experiment 009 — Start Test Project 2 from the template
+
+Date: 2026-10-02
+
+### Goal
+
+Replace the template pilot data with a read-only export from the `Design System — Test2` Figma file and prepare a project-specific shadcn mapping.
+
+### Result — export checkpoint
+
+- Created the private repository `ollysaii/test-user` from the workflow template.
+- Updated the project identity and Figma source in `project.config.json`.
+- Exported 4 local Variable collections and 129 Variables in bounded batches.
+- Verified 112 COLOR Variables, 17 FLOAT Variables, 69 aliases, and zero broken alias targets.
+- Exported 1 paint Style, 16 text Styles, and 5 effect Styles.
+- Inventoried 26 base component assets containing 174 variants across the approved Core pages.
+- Preserved the Figma file unchanged.
+
+### Important source behavior
+
+- `Primitives` contains two modes: `Orange` and `Blue`.
+- `Semantic` contains one mode named `Orange`; all 69 Semantic values alias Primitives.
+- The shadcn mapping must therefore explicitly decide whether the first prototype uses the Orange primitive mode only or exposes Orange and Blue as brand themes.
+
+### Errors and lessons
+
+- A combined Styles and Components response exceeded the Figma MCP response limit and was truncated.
+- Recovery: export Styles separately and inventory only the approved Core component pages, excluding Icons, Sidebar, and Design Elements.
+- Lesson: the bounded-batch rule applies to component and Style metadata as well as Variables.
+
 ## Experiment 001 — Establish scope and export Figma Variables
 
 Date: 2026-09-25

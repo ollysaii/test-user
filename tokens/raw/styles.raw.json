@@ -1,0 +1,624 @@
+{
+  "exportedAt": "2026-10-02",
+  "fileKey": "46nPhujYaIS66Y0uJeCPit",
+  "styles": {
+    "paint": [
+      {
+        "id": "S:911596c00cd3970783f41d519fd3c29cf6b2f05b,",
+        "key": "911596c00cd3970783f41d519fd3c29cf6b2f05b",
+        "name": "bg",
+        "description": "",
+        "paints": [
+          {
+            "type": "GRADIENT_LINEAR",
+            "visible": true,
+            "opacity": 1,
+            "blendMode": "NORMAL",
+            "gradientStops": [
+              {
+                "color": {
+                  "r": 0.15294118225574493,
+                  "g": 0.3921568691730499,
+                  "b": 0.6000000238418579,
+                  "a": 1
+                },
+                "position": 0,
+                "boundVariables": {}
+              },
+              {
+                "color": {
+                  "r": 0.4745098054409027,
+                  "g": 0.6627451181411743,
+                  "b": 0.7803921699523926,
+                  "a": 1
+                },
+                "position": 1,
+                "boundVariables": {}
+              }
+            ],
+            "gradientTransform": [
+              [
+                6.123234262925839e-17,
+                1,
+                0
+              ],
+              [
+                -1,
+                6.123234262925839e-17,
+                1
+              ]
+            ]
+          }
+        ]
+      }
+    ],
+    "text": [
+      {
+        "id": "S:efeaab7aad3289633fb983bf2d9076cabeb9ba90,",
+        "key": "efeaab7aad3289633fb983bf2d9076cabeb9ba90",
+        "name": "body-xs",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 10,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 14
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 5
+        },
+        "paragraphSpacing": 0,
+        "textCase": "UPPER",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:db4319d1fe6b159e4f085cb6c5700702f06b47c0,",
+        "key": "db4319d1fe6b159e4f085cb6c5700702f06b47c0",
+        "name": "body-xs/regular",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Regular"
+        },
+        "fontSize": 12,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:99c834badbf6c1706070ee47895ee99eed84c3b9,",
+        "key": "99c834badbf6c1706070ee47895ee99eed84c3b9",
+        "name": "body-xs/medium",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Medium"
+        },
+        "fontSize": 12,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:c70a825794ae5074f68b238854ec66620a35bc0e,",
+        "key": "c70a825794ae5074f68b238854ec66620a35bc0e",
+        "name": "body-xs/semibold",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 12,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:40ab6b47471a1e2863a7e7044cdd9b9724296edf,",
+        "key": "40ab6b47471a1e2863a7e7044cdd9b9724296edf",
+        "name": "body-sm/regular",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Regular"
+        },
+        "fontSize": 13,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:aa8d35c297eb029de22e00597ec56f978c94dde5,",
+        "key": "aa8d35c297eb029de22e00597ec56f978c94dde5",
+        "name": "body-sm/medium",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Medium"
+        },
+        "fontSize": 13,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:7a2cf918ce7ca5a5ccf10d373ee760a19816f422,",
+        "key": "7a2cf918ce7ca5a5ccf10d373ee760a19816f422",
+        "name": "body-sm/semibold",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 13,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 16
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:f294df61592ecdb957a0b50cfe220f6c2ec72ef6,",
+        "key": "f294df61592ecdb957a0b50cfe220f6c2ec72ef6",
+        "name": "body-md/regular",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Regular"
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:4c92f08209a217473f0b935ae0fd29f9e371905b,",
+        "key": "4c92f08209a217473f0b935ae0fd29f9e371905b",
+        "name": "body-md/medium",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Medium"
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:ec2197091fa3ced8ddaddd4d7db861df89c9b713,",
+        "key": "ec2197091fa3ced8ddaddd4d7db861df89c9b713",
+        "name": "body-md/semibold",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 14,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:2fb0bd20f372933d885c7d47906b6631f6f5daeb,",
+        "key": "2fb0bd20f372933d885c7d47906b6631f6f5daeb",
+        "name": "label-sm",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 15,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 20
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:02510a1efc2701ad0fd230d3e6e851afa2a4900a,",
+        "key": "02510a1efc2701ad0fd230d3e6e851afa2a4900a",
+        "name": "label-md/medium",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Medium"
+        },
+        "fontSize": 16,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:71857277e9b664e20568c3a4e7f6c8a83f5f3673,",
+        "key": "71857277e9b664e20568c3a4e7f6c8a83f5f3673",
+        "name": "label-md/semibold",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 16,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:9e53b86b1fc63415fb09fb6c0e79dfa992b55188,",
+        "key": "9e53b86b1fc63415fb09fb6c0e79dfa992b55188",
+        "name": "heading-sm",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 18,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 24
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:c08d5384acadcf57493c2e461595a09b5a0545c1,",
+        "key": "c08d5384acadcf57493c2e461595a09b5a0545c1",
+        "name": "display-sm",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 20,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 28
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      },
+      {
+        "id": "S:eb54a948328ff22feb8e255a5f3273e5935b8d72,",
+        "key": "eb54a948328ff22feb8e255a5f3273e5935b8d72",
+        "name": "display-md",
+        "description": "",
+        "fontName": {
+          "family": "SF Pro Display",
+          "style": "Semibold"
+        },
+        "fontSize": 24,
+        "lineHeight": {
+          "unit": "PIXELS",
+          "value": 32
+        },
+        "letterSpacing": {
+          "unit": "PERCENT",
+          "value": 0
+        },
+        "paragraphSpacing": 0,
+        "textCase": "ORIGINAL",
+        "textDecoration": "NONE"
+      }
+    ],
+    "effect": [
+      {
+        "id": "S:82617ecbea13828839a5a705f60fab37ff1c733e,",
+        "key": "82617ecbea13828839a5a705f60fab37ff1c733e",
+        "name": "shadow/xs",
+        "description": "",
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.05999999865889549
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      },
+      {
+        "id": "S:165a7f4282d306bccd3782052524511d35757d73,",
+        "key": "165a7f4282d306bccd3782052524511d35757d73",
+        "name": "shadow/sm",
+        "description": "",
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 2,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.05999999865889549
+            },
+            "offset": {
+              "x": 0,
+              "y": 1
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 4,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.10000000149011612
+            },
+            "offset": {
+              "x": 0,
+              "y": 2
+            },
+            "spread": -1,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      },
+      {
+        "id": "S:dcff9ba4b54007fdd4f1cdc056c79cdd5ee7ad48,",
+        "key": "dcff9ba4b54007fdd4f1cdc056c79cdd5ee7ad48",
+        "name": "shadow/md",
+        "description": "",
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 4,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.05999999865889549
+            },
+            "offset": {
+              "x": 0,
+              "y": 2
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 8,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.10000000149011612
+            },
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "spread": -2,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      },
+      {
+        "id": "S:b53252b0a24a8986a175a622b883de11dac608b8,",
+        "key": "b53252b0a24a8986a175a622b883de11dac608b8",
+        "name": "shadow/lg",
+        "description": "",
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 6,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.05999999865889549
+            },
+            "offset": {
+              "x": 0,
+              "y": 4
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 16,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.10000000149011612
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": -4,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      },
+      {
+        "id": "S:eceb5660299ba0a249efaa08db7446dcd674d574,",
+        "key": "eceb5660299ba0a249efaa08db7446dcd674d574",
+        "name": "shadow/xl",
+        "description": "",
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 12,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.07999999821186066
+            },
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "spread": 0,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "radius": 32,
+            "boundVariables": {},
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.11999999731779099
+            },
+            "offset": {
+              "x": 0,
+              "y": 16
+            },
+            "spread": -8,
+            "blendMode": "NORMAL",
+            "showShadowBehindNode": true
+          }
+        ]
+      }
+    ],
+    "grid": []
+  }
+}

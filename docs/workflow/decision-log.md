@@ -85,3 +85,9 @@ Keep the reusable workflow as a template, then create a separate repository for 
 Status: verified in the pilot
 
 Use the committed Vite, React, shadcn, Radix, and Nova setup under `apps/prototype/`. Future prototype tasks reuse it and replace only project-specific tokens, mappings, theme, and screens. Do not initialize shadcn again inside an existing project repository.
+
+## D-015 — Preserve Test Project 2 brand modes pending approval
+
+Status: awaiting project decision
+
+The source Primitives collection contains `Orange` and `Blue`, while the Semantic collection contains one mode named `Orange` whose values alias Primitives. Preserve both raw primitive modes. Do not generate one theme, two themes, or silently discard either mode until the project designer approves the initial prototype scope.
