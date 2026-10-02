@@ -21,6 +21,7 @@ Last verified checkpoint: registration prototype built and interaction-tested
 - Extended the prototype with returning-customer login, access recovery, callback requests, and context-aware destinations.
 - Verified a policy deep-link login and a successful recovery callback request.
 - Added and verified the six-step ОСЦПВ application wizard, including lookup fallback, documents, submission, and resumable drafts.
+- Transferred 27 editable mobile screens to the Figma `Design` page in three organized sections and verified their 375 × 812 px sizing and Variable bindings.
 
 ## Current source state
 

@@ -334,3 +334,19 @@ Date: 2026-10-02
 ### Lesson
 
 Keeping the wizard in a dedicated module makes a large scenario reviewable without destabilizing authentication. Persisting only the last incomplete step is sufficient for this prototype; production persistence remains deliberately out of scope.
+
+## Experiment 011 — Transfer prototype designs into Figma
+
+Date: 2026-10-02
+
+### Result
+
+- Added 27 editable 375 × 812 px mobile frames to the existing `Design` page in the Test Project 2 Figma file.
+- Organized the frames into Registration (8), Login & Access Recovery (8), and ОСЦПВ Application (11) sections.
+- Bound prototype fills and text colors to the existing local Orange semantic Variables without changing the design-system source pages.
+- Visually reviewed all three sections and fixed three text-spacing collisions in Registration.
+
+### Errors and lessons
+
+- The existing Button component could not accept a text override through Figma MCP because its source font was unavailable in the authoring runtime. The failed write was atomic and created no partial frames.
+- Recovery: preserve the component library, use the existing Variables, and build local prototype buttons from editable layout primitives. Future component reuse requires making the component font available to the authoring runtime or replacing it with an available library font.
